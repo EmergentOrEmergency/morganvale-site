@@ -1,0 +1,43 @@
+/* pagina di un caso */
+.progress{position:fixed;top:0;left:0;right:0;height:2px;z-index:20;background:var(--accent);transform:scaleX(0);transform-origin:left;pointer-events:none}
+.caso-main{max-width:1100px;margin:0 auto;padding:clamp(6rem,14vh,9rem) clamp(1.2rem,5vw,3rem) 4rem}
+.caso-n{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 1.2rem}
+.caso h1{font-weight:400;font-size:clamp(3rem,10vw,7rem);line-height:1;margin:0 0 1.2rem;letter-spacing:-.01em}
+.caso-sub{font-size:clamp(1.3rem,3vw,1.8rem);font-style:italic;color:var(--mute);max-width:34ch;margin:0 0 3rem}
+
+.confronto{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin:0 0 4rem}
+.confronto > div{background:var(--bg);padding:1.6rem 1.5rem}
+.confronto span{display:block;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:#6f6c64;margin-bottom:.8rem}
+.confronto > div:last-child span{color:var(--accent)}
+.confronto p{margin:0;font-size:1.25rem;line-height:1.45}
+.confronto > div:first-child p{color:var(--mute);text-decoration:line-through;text-decoration-color:#6f6c6477}
+@media (max-width:700px){.confronto{grid-template-columns:1fr}}
+
+.caso-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:clamp(2rem,6vw,5rem);align-items:start}
+@media (max-width:900px){.caso-grid{grid-template-columns:1fr}}
+.testo{max-width:36rem}
+.testo p{margin:0 0 1.2rem;font-size:1.3rem;line-height:1.65}
+.estratto-nota{font-family:"IBM Plex Mono",ui-monospace,monospace!important;font-size:.72rem!important;letter-spacing:.14em;text-transform:uppercase;color:#6f6c64}
+.citazione{margin:1.8rem 0;padding:.4rem 0 .4rem 1.4rem;border-left:2px solid var(--accent);font-style:italic;font-size:1.45rem;line-height:1.4;color:var(--ink)}
+.testo h3{font-weight:400;font-size:1.6rem;margin:2.6rem 0 1rem}
+.continua{margin-top:3rem!important;padding-top:2rem;border-top:1px solid var(--line);color:var(--mute)}
+.testo .buy{margin-top:1rem}
+
+.fonti-box{position:sticky;top:6rem;border:1px solid var(--line);padding:1.5rem;background:var(--bg2);font-family:var(--sans);font-size:.88rem;line-height:1.55}
+@media (max-width:900px){.fonti-box{position:static}}
+.fonti-box h2{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:400;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 1rem}
+.lista-fonti{list-style:none;margin:0;padding:0}
+.lista-fonti li{padding:.9rem 0;border-top:1px solid var(--line);color:var(--mute)}
+.lista-fonti li:first-child{border-top:0;padding-top:0}
+.lista-fonti strong{color:var(--ink);font-weight:500}
+.lista-fonti a,.nota-fonti a{color:var(--ink);text-decoration:underline;text-decoration-color:#c9b98a66;text-underline-offset:3px;word-break:break-word}
+.lista-fonti a:hover{text-decoration-color:var(--accent)}
+.nota-fonti{color:#8a877f;font-size:.8rem;margin:0 0 1.2rem}
+
+.caso-nav{display:flex;justify-content:space-between;gap:1rem;margin-top:5rem;padding-top:2rem;border-top:1px solid var(--line);font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.82rem;letter-spacing:.06em}
+.caso-nav a{text-decoration:none;color:var(--mute)}
+.caso-nav a:hover{color:var(--ink)}
+
+/* correzioni */
+.confronto{padding:0}
+.caso .top{background:linear-gradient(#070b14f2 60%,#070b1400);backdrop-filter:blur(6px)}

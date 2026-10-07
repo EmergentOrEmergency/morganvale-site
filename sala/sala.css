@@ -1,0 +1,38 @@
+html,body.sala{height:100%;overflow:hidden;background:#03050a;overscroll-behavior:none}
+#c{position:fixed;inset:0;width:100%;height:100%;display:block;filter:grayscale(.9) contrast(1.08);touch-action:none;cursor:grab}
+#c.grab{cursor:grabbing}
+#c.over{cursor:pointer}
+.film{position:fixed;inset:0;pointer-events:none;z-index:2;
+  background:radial-gradient(ellipse at center,transparent 35%,#02030699 100%);
+}
+.film::after{content:"";position:absolute;inset:0;opacity:.13;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+@media (prefers-reduced-motion:no-preference){.film::after{animation:grana .6s steps(3) infinite}}
+@keyframes grana{0%{transform:translate(0,0)}33%{transform:translate(-3%,2%)}66%{transform:translate(2%,-3%)}}
+
+.sala-top{position:fixed;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:1rem clamp(1rem,4vw,3rem);font-family:var(--sans);font-size:.85rem}
+.sala-top a{text-decoration:none;color:var(--mute)}
+.sala-top a:hover{color:var(--ink)}
+.sala-top .brand{letter-spacing:.35em;text-transform:uppercase;font-size:.78rem;color:var(--ink)}
+.esci{font-family:"IBM Plex Mono",ui-monospace,monospace;letter-spacing:.1em;text-transform:uppercase;font-size:.78rem}
+
+.intro-msg{position:fixed;z-index:5;left:50%;bottom:clamp(2rem,9vh,5rem);transform:translateX(-50%);text-align:center;width:min(90vw,32rem);transition:opacity .8s}
+.intro-msg.off{opacity:0;pointer-events:none}
+.intro-msg p{margin:0 0 1.2rem;font-size:1.3rem;color:var(--ink);text-shadow:0 1px 10px #000}
+.intro-msg button{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bg);background:var(--ink);border:0;border-radius:3rem;padding:.9rem 1.8rem;cursor:pointer;animation:pulsa 2.4s ease-in-out infinite}
+@keyframes pulsa{50%{box-shadow:0 0 0 8px #e8e2d322}}
+@media (prefers-reduced-motion:reduce){.intro-msg button{animation:none}}
+
+.caption{position:fixed;z-index:5;left:50%;top:clamp(4.5rem,12vh,7rem);transform:translateX(-50%);margin:0;max-width:90vw;text-align:center;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);text-shadow:0 1px 8px #000;opacity:0;transition:opacity .25s;pointer-events:none}
+.caption.on{opacity:1}
+.hint{position:fixed;z-index:5;left:50%;bottom:1.2rem;transform:translateX(-50%);margin:0;width:min(92vw,46rem);text-align:center;font-family:var(--sans);font-size:.75rem;color:var(--mute);text-shadow:0 1px 6px #000;transition:opacity 1.5s;pointer-events:none}
+.hint.off{opacity:0}
+
+.pad{position:fixed;z-index:5;right:1rem;bottom:1.4rem;display:flex;flex-direction:column;gap:.6rem}
+.pad button{width:3.4rem;height:3.4rem;border-radius:50%;border:1px solid var(--line);background:#05080fcc;color:var(--ink);font-size:1.1rem;touch-action:none;-webkit-user-select:none;user-select:none}
+.pad button:active{border-color:var(--accent)}
+
+.fail{position:fixed;z-index:9;left:50%;top:45%;transform:translateX(-50%);text-align:center;color:var(--ink);font-size:1.3rem}
+.fail a{color:var(--accent)}
+
+.pad[hidden],.fail[hidden],.hint[hidden],.intro-msg[hidden]{display:none}

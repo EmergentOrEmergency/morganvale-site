@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Un momento…</title>
+<style>body{background:#070b14;color:#e8e2d3;font-family:Georgia,serif;display:grid;place-items:center;min-height:100vh;margin:0;text-align:center}a{color:#c9b98a}</style>
+</head>
+<body>
+<p id="msg">Ti porto su Amazon…<br><a id="lnk" href="https://morganvale.eu/">Se non succede nulla, clicca qui</a></p>
+<script>
+// Redirect di tracciamento: /go/?p=<prodotto>&c=<canale>
+// p = prodotto (vedi PRODOTTI). c = canale (sito, linkedin, reddit, ...).
+// TAGS: dopo l'apertura degli account Associates, inserire qui un ID per ogni mercato e canale.
+const PRODOTTI = {
+  "it-ebook":     { host: "www.amazon.it", asin: "B0HM59LCGG" },
+  "it-cartaceo":  { host: "www.amazon.it", asin: "B0HM4YXHGX" }
+};
+const TAGS = {
+  // "www.amazon.it": { sito: "morganvale-21", linkedin: "mvlinkedin-21" },
+};
+const q = new URLSearchParams(location.search);
+const p = PRODOTTI[q.get("p")];
+const c = (q.get("c") || "sito").replace(/[^a-z0-9_-]/gi, "").slice(0, 32);
+let dest = "https://morganvale.eu/";
+if (p) {
+  dest = `https://${p.host}/dp/${p.asin}`;
+  const tag = TAGS[p.host] && (TAGS[p.host][c] || TAGS[p.host].sito);
+  if (tag) dest += `?tag=${encodeURIComponent(tag)}`;
+}
+document.getElementById("lnk").href = dest;
+setTimeout(() => location.replace(dest), 150);
+</script>
+</body>
+</html>
