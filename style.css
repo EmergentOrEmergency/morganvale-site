@@ -20,12 +20,12 @@ img{max-width:100%;height:auto}
 .hero{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6rem 1.5rem 4rem;position:relative;overflow:hidden}
 .hero .bg{position:absolute;inset:0;z-index:0;background:#05080f;filter:grayscale(1)}
 .hero .bg canvas,#regia{position:absolute;inset:0;width:100%;height:100%}
-.hero .bg canvas{object-fit:cover;opacity:.55;mix-blend-mode:screen}
-.hero.con-video .bg canvas{opacity:.18}
+.hero .bg canvas{object-fit:cover;opacity:.32;mix-blend-mode:screen;filter:blur(1.4px)}
+.hero.con-video .bg canvas{opacity:.1}
 #regia{overflow:hidden}
 #regia .rv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 50%;opacity:0;transition:opacity 1.2s ease}
-#regia .rv.on{opacity:.8}
-.vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 25%,#05080fcc 100%),linear-gradient(#05080f66,transparent 30%,#05080fcc)}
+#regia .rv.on{opacity:.62}
+.vignette{position:absolute;inset:0;background:radial-gradient(ellipse at center,#05080f55 10%,#05080fee 100%),linear-gradient(#05080f99,transparent 35%,#05080fdd)}
 .hero-inner{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center}
 .statement{position:absolute;z-index:1;left:clamp(1.2rem,4vw,3rem);bottom:clamp(2.2rem,6vh,4rem);max-width:28ch;margin:0;text-align:left;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:clamp(.78rem,1.6vw,.95rem);line-height:1.6;color:var(--ink);text-shadow:0 1px 8px #000}
 .cursor{display:inline-block;width:.55em;height:1.05em;margin-left:.2em;vertical-align:-.15em;background:var(--ink);animation:blink 1.1s steps(1) infinite}

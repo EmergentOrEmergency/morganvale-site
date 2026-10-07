@@ -100,14 +100,14 @@ let t = 0, last = 0, visible = true;
 new IntersectionObserver(([e]) => { visible = e.isIntersecting; }, { threshold: 0 }).observe(hero);
 function grain(ts) {
   if (!reduce) requestAnimationFrame(grain);
-  if (!visible || ts - last < 70) return; // circa 14 fotogrammi al secondo, come una pellicola
-  last = ts; t += 0.012;
+  if (!visible || ts - last < 120) return; // circa 8 fotogrammi al secondo: grana lenta e morbida
+  last = ts; t += 0.006;
   const d = img.data;
   for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) {
     const k = (y * W + x) * 4;
     // luce lenta che si sposta, più grana
-    const l = 26 + 22 * Math.sin(x * 0.012 + t * 2) * Math.cos(y * 0.018 - t) + 14 * Math.sin((x + y) * 0.006 + t);
-    const g = Math.max(0, Math.min(255, l + (Math.random() - 0.5) * 46));
+    const l = 11 + 8 * Math.sin(x * 0.012 + t * 2) * Math.cos(y * 0.018 - t) + 5 * Math.sin((x + y) * 0.006 + t);
+    const g = Math.max(0, Math.min(255, l + (Math.random() - 0.5) * 14));
     d[k] = d[k + 1] = d[k + 2] = g; d[k + 3] = 255;
   }
   ctx.putImageData(img, 0, 0);
