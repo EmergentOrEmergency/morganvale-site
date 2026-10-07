@@ -296,7 +296,7 @@ async function main() {
   });
   addEventListener("wheel", (e) => {
     if (state !== "free" || panelOpen) return;
-    pos.z = Math.min(Z_MAX, Math.max(Z_MIN, pos.z - e.deltaY * 0.004));
+    pos.z = Math.min(Z_MAX, Math.max(Z_MIN, pos.z + e.deltaY * 0.004));   // rotella in avanti = si avanza
   }, { passive: true });
 
   if (coarse) {
