@@ -1,5 +1,8 @@
-import { TEMI, CASI, PAGINE } from "../casi.js";
-import { SEQUENZA } from "../regia.js";
+import { I18N } from "/lingue.js";
+import { SEQUENZA } from "/regia.js";
+
+const LANG = I18N[document.documentElement.lang] || I18N.it;
+const TEMI = LANG.themes, CASI = LANG.cases, PAGINE = LANG.pages, S = LANG.sala;
 
 const $ = (id) => document.getElementById(id);
 const pad = (n) => String(n).padStart(2, "0");
@@ -18,7 +21,7 @@ async function main() {
   try {
     THREE = await import("https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js");
   } catch (e) {
-    return fail("Non riesco a caricare la sala 3D.");
+    return fail(S.fail_load);
   }
   await Promise.all([
     document.fonts.load('64px "IBM Plex Mono"'),
@@ -30,7 +33,7 @@ async function main() {
   try {
     renderer = new THREE.WebGLRenderer({ canvas, antialias: !coarse });
   } catch (e) {
-    return fail("Questo browser non supporta la grafica 3D.");
+    return fail(S.fail_gl);
   }
   renderer.setPixelRatio(Math.min(devicePixelRatio, 1.5));
   renderer.setSize(innerWidth, innerHeight, false);
@@ -171,7 +174,7 @@ async function main() {
   const clip = () => SEQUENZA[ti % SEQUENZA.length];
   function avvia() {
     const c = clip();
-    tv.src = "../" + c.src;
+    tv.src = c.src;
     tv.addEventListener("loadeddata", () => { tv.currentTime = c.da; tv.playbackRate = c.vel; tv.play().catch(() => {}); }, { once: true });
     tv.load();
   }
@@ -223,25 +226,25 @@ async function main() {
     sg.fillStyle = "#06080d"; sg.fillRect(0, 0, w, h);
     sg.fillStyle = "#151a24"; sg.fillRect(0, 0, w, 34);
     sg.fillStyle = "#6e7686"; sg.font = '15px "IBM Plex Mono", monospace';
-    sg.fillText("Nuovo messaggio", 16, 22);
+    sg.fillText(S.schermo.nuovo, 16, 22);
     sg.strokeStyle = "#1c2433"; sg.strokeRect(16.5, 56.5, w - 33, 150);
     sg.fillStyle = "#d9d4c6"; sg.font = '26px "IBM Plex Mono", monospace';
     const dots = 1 + Math.floor(now / 500) % 3;
     if (!sent) {
-      sg.fillText("Ho scritto tutto.", 32, 100);
-      sg.fillStyle = "#8d94a3"; sg.fillText("Manca solo", 32, 136);
-      const t = "Invio" + (Math.floor(now / 550) % 2 ? "▍" : "");
+      sg.fillText(S.schermo.l1, 32, 100);
+      sg.fillStyle = "#8d94a3"; sg.fillText(S.schermo.l2, 32, 136);
+      const t = S.schermo.l3 + (Math.floor(now / 550) % 2 ? "▍" : "");
       sg.fillStyle = "#e8e2d3"; sg.fillText(t, 32, 172);
       sg.fillStyle = "#4b5260";
       for (let d = 0; d < 3; d++) { sg.globalAlpha = d < dots ? 1 : 0.25; sg.beginPath(); sg.arc(w - 90 + d * 22, 238, 6, 0, 7); sg.fill(); }
       sg.globalAlpha = 1;
     } else {
-      sg.fillStyle = "#e8e2d3"; sg.fillText("Inviato.", 32, 110);
+      sg.fillStyle = "#e8e2d3"; sg.fillText(S.schermo.inviato, 32, 110);
     }
     sg.fillStyle = sent ? "#2a3040" : "#e8e2d3";
     sg.fillRect(w - 128, 262, 100, 30);
     sg.fillStyle = "#06080d"; sg.font = '15px "IBM Plex Mono", monospace';
-    sg.fillText("Invia", w - 100, 282);
+    sg.fillText(S.schermo.invia, w - 100, 282);
     screen.t.needsUpdate = true;
   }
   const scr = new THREE.Mesh(new THREE.PlaneGeometry(0.64, 0.387), new THREE.MeshBasicMaterial({ map: screen.t, toneMapped: false }));
@@ -321,7 +324,7 @@ async function main() {
     focus = i;
     if (i >= 0) {
       plates[i].color.setHex(0xffffff);
-      cap.textContent = `${pad(i + 1)} · ${CASI[i][0]} — clic per aprire`;
+      cap.textContent = `${pad(i + 1)} · ${CASI[i][0]} — ${S.apri}`;
       cap.classList.add("on");
       canvas.classList.add("over");
     } else {
@@ -375,7 +378,7 @@ async function main() {
     const url = PAGINE[i];
     const link = $("stage-link");
     link.hidden = !url;
-    if (url) link.href = "../" + url;
+    if (url) link.href = url;
     $("stage-src").hidden = !!url;
   }
   function openPanel(i) {
@@ -450,4 +453,4 @@ async function main() {
   requestAnimationFrame(frame);
 }
 
-main().catch((e) => { console.error("sala:", e); fail("Qualcosa non ha funzionato."); });
+main().catch((e) => { console.error("sala:", e); fail(S.fail_gen); });

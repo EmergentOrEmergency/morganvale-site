@@ -4,8 +4,8 @@
 // Clip generate con Gemini (abbonamento a pagamento). Si aggiungono qui le prossime.
 // Il corridoio di Kling (piano gratuito, senza uso commerciale) non è incluso: va rigenerato prima.
 export const SEQUENZA = [
-  { src: "assets/video/hero-01-tasto.mp4",  da: 0.0, a: 10.0, vel: 1.0 },
-  { src: "assets/video/hero-02-occhio.mp4", da: 0.0, a: 10.0, vel: 0.9 },
+  { src: "/assets/video/hero-01-tasto.mp4",  da: 0.0, a: 10.0, vel: 1.0 },
+  { src: "/assets/video/hero-02-occhio.mp4", da: 0.0, a: 10.0, vel: 0.9 },
 ];
 
 export class Regia {

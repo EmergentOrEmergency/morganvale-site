@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="it">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>La sala — Prima di premere invio · Morgan Vale</title>
-<meta name="description" content="Una sala server da attraversare a piedi. Diciannove armadi, diciannove storie documentate.">
-<link rel="canonical" href="https://morganvale.eu/sala/">
+<title>The Room — Before You Press Send · Morgan Vale</title>
+<meta name="description" content="A server room to walk through. Nineteen racks, nineteen documented stories.">
+<link rel="canonical" href="https://morganvale.eu/en/sala/">
 <link rel="alternate" hreflang="it" href="https://morganvale.eu/sala/">
 <link rel="alternate" hreflang="en" href="https://morganvale.eu/en/sala/">
 <link rel="alternate" hreflang="x-default" href="https://morganvale.eu/sala/">
@@ -20,42 +20,42 @@
 </head>
 <body class="sala">
 
-<canvas id="c" aria-label="Sala server in 3D"></canvas>
+<canvas id="c" aria-label="Server room in 3D"></canvas>
 <div class="film" aria-hidden="true"></div>
 
 <header class="sala-top">
-  <a class="brand" href="/">Morgan Vale</a>
-  <a class="esci" href="/">Esci ✕</a>
+  <a class="brand" href="/en/">Morgan Vale</a>
+  <a class="esci" href="/en/">Exit ✕</a>
 </header>
 
-<noscript><p class="fail">La sala richiede JavaScript. <a href="/">Torna al sito</a>.</p></noscript>
-<p class="fail" id="fail" hidden><a href="/">Torna al sito</a></p>
+<noscript><p class="fail">The room needs JavaScript. <a href="/en/">Back to the site</a>.</p></noscript>
+<p class="fail" id="fail" hidden><a href="/en/">Back to the site</a></p>
 
 <div class="intro-msg" id="intro-msg">
-  <p>Un messaggio è pronto. Nessuno l&#x27;ha ancora inviato.</p>
-  <button id="send" type="button">Premi Invio</button>
+  <p>A message is ready. No one has sent it yet.</p>
+  <button id="send" type="button">Press Enter</button>
 </div>
 
 <p class="caption" id="caption" aria-live="polite"></p>
-<p class="hint" id="hint" hidden>Trascina per guardarti intorno · W A S D o frecce per camminare · clic su un armadio per aprirlo</p>
+<p class="hint" id="hint" hidden>Drag to look around · W A S D or arrow keys to walk · click a rack to open it</p>
 
 <div class="pad" id="pad" hidden>
-  <button id="go-f" aria-label="Avanti">▲</button>
-  <button id="go-b" aria-label="Indietro">▼</button>
+  <button id="go-f" aria-label="Forward">▲</button>
+  <button id="go-b" aria-label="Back">▼</button>
 </div>
 
-<div class="stage" id="stage" role="dialog" aria-modal="true" aria-label="Storia" hidden>
-  <button class="stage-close" id="stage-close" aria-label="Chiudi ✕">Chiudi ✕</button>
+<div class="stage" id="stage" role="dialog" aria-modal="true" aria-label="Story" hidden>
+  <button class="stage-close" id="stage-close" aria-label="Close ✕">Close ✕</button>
   <div class="stage-body">
     <p class="stage-theme" id="stage-theme"></p>
     <h3 id="stage-title"></h3>
     <p class="stage-text" id="stage-text"></p>
-    <p class="stage-src" id="stage-src">Fonti e cronologia complete: pagina del caso in arrivo.</p>
-    <a class="stage-link" id="stage-link" href="#" hidden>Leggi l&#x27;estratto e le fonti →</a>
+    <p class="stage-src" id="stage-src">Full sources and timeline: the story page is coming soon.</p>
+    <a class="stage-link" id="stage-link" href="#" hidden>Read the excerpt and the sources →</a>
   </div>
   <div class="stage-bar">
     <span class="stage-count" id="stage-count"></span>
-    <span class="stage-nav"><button id="stage-prev" aria-label="Storia precedente">←</button><button id="stage-next" aria-label="Storia successiva">→</button></span>
+    <span class="stage-nav"><button id="stage-prev" aria-label="Previous story">←</button><button id="stage-next" aria-label="Next story">→</button></span>
   </div>
 </div>
 

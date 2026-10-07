@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url><loc>https://morganvale.eu/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/"/>
+</url>
+<url><loc>https://morganvale.eu/en/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/"/>
+</url>
+<url><loc>https://morganvale.eu/sala/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/sala/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/sala/"/>
+</url>
+<url><loc>https://morganvale.eu/en/sala/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/sala/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/sala/"/>
+</url>
+<url><loc>https://morganvale.eu/storia/alle-cinque/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/storia/alle-cinque/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/story/at-five-oclock/"/>
+</url>
+<url><loc>https://morganvale.eu/en/story/at-five-oclock/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/storia/alle-cinque/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/story/at-five-oclock/"/>
+</url>
+</urlset>

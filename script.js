@@ -1,5 +1,8 @@
-import { TEMI, CASI, PAGINE } from "./casi.js";
-import { Regia } from "./regia.js";
+import { I18N } from "/lingue.js";
+import { Regia } from "/regia.js";
+
+const LANG = I18N[document.documentElement.lang] || I18N.it;
+const TEMI = LANG.themes, CASI = LANG.cases, PAGINE = LANG.pages;
 
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const pad = (n) => String(n).padStart(2, "0");
@@ -23,7 +26,7 @@ CASI.forEach(([t, d, tema], i) => {
 });
 
 const filters = document.getElementById("filters");
-[["tutti", "Tutti"], ...Object.entries(TEMI)].forEach(([k, label], idx) => {
+[["tutti", LANG.all], ...Object.entries(TEMI)].forEach(([k, label], idx) => {
   const b = document.createElement("button");
   b.type = "button"; b.textContent = label; b.dataset.k = k;
   b.setAttribute("aria-pressed", idx === 0 ? "true" : "false");

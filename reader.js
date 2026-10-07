@@ -33,7 +33,7 @@
   function go(p, quiet) {
     page = Math.max(0, Math.min(pages - 1, p));
     flow.style.transform = `translateX(${-page * step}px)`;
-    $("er-pos").textContent = `Pagina ${page + 1} di ${pages}`;
+    $("er-pos").textContent = (root.dataset.pos || "Page {p} of {n}").replace("{p}", page + 1).replace("{n}", pages);
     $("er-pct").textContent = Math.round(((page + 1) / pages) * 100) + "%";
     $("er-prog").style.width = ((page + 1) / pages) * 100 + "%";
     if (!quiet) last = performance.now();

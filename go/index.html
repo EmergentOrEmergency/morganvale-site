@@ -14,8 +14,16 @@
 // p = prodotto (vedi PRODOTTI). c = canale (sito, linkedin, reddit, ...).
 // TAGS: dopo l'apertura degli account Associates, inserire qui un ID per ogni mercato e canale.
 const PRODOTTI = {
-  "it-ebook":     { host: "www.amazon.it", asin: "B0HM59LCGG" },
-  "it-cartaceo":  { host: "www.amazon.it", asin: "B0HM4YXHGX" }
+  // Prodotti con ASIN noto: host + asin. Quelli con "cerca" portano alla ricerca del titolo,
+  // in attesa dell'ASIN (da inserire quando i libri sono online).
+  "it-ebook":        { host: "www.amazon.it", asin: "B0HM59LCGG" },
+  "it-cartaceo":     { host: "www.amazon.it", asin: "B0HM4YXHGX" },
+  "en-ebook":        { host: "www.amazon.com", cerca: "Before You Press Send Morgan Vale" },
+  "en-paperback":    { host: "www.amazon.com", cerca: "Before You Press Send Morgan Vale" },
+  "es-ebook":        { host: "www.amazon.es", cerca: "Antes de pulsar Enviar Morgan Vale" },
+  "es-tapa":         { host: "www.amazon.es", cerca: "Antes de pulsar Enviar Morgan Vale" },
+  "de-ebook":        { host: "www.amazon.de", cerca: "Bevor Sie auf Senden drücken Morgan Vale" },
+  "de-taschenbuch":  { host: "www.amazon.de", cerca: "Bevor Sie auf Senden drücken Morgan Vale" }
 };
 const TAGS = {
   // "www.amazon.it": { sito: "morganvale-21", linkedin: "mvlinkedin-21" },
@@ -25,9 +33,9 @@ const p = PRODOTTI[q.get("p")];
 const c = (q.get("c") || "sito").replace(/[^a-z0-9_-]/gi, "").slice(0, 32);
 let dest = "https://morganvale.eu/";
 if (p) {
-  dest = `https://${p.host}/dp/${p.asin}`;
+  dest = p.asin ? `https://${p.host}/dp/${p.asin}` : `https://${p.host}/s?k=${encodeURIComponent(p.cerca)}`;
   const tag = TAGS[p.host] && (TAGS[p.host][c] || TAGS[p.host].sito);
-  if (tag) dest += `?tag=${encodeURIComponent(tag)}`;
+  if (tag) dest += (dest.includes("?") ? "&" : "?") + `tag=${encodeURIComponent(tag)}`;
 }
 document.getElementById("lnk").href = dest;
 setTimeout(() => location.replace(dest), 150);
