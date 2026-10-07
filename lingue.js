@@ -106,7 +106,11 @@ export const I18N = {
    ]
   ],
   "pages": {
-   "0": "/storia/alle-cinque/"
+   "0": "/storia/alle-cinque/",
+   "1": "/storia/chi-ha-premuto-invio/",
+   "2": "/storia/il-pulsante-rosso/",
+   "3": "/storia/umani-ammessi-a-guardare/",
+   "4": "/storia/il-quarto-voto/"
   },
   "sala": {
    "titolo": "La sala — Prima di premere invio · Morgan Vale",
@@ -240,7 +244,11 @@ export const I18N = {
    ]
   ],
   "pages": {
-   "0": "/en/story/at-five-oclock/"
+   "0": "/en/story/at-five-oclock/",
+   "1": "/en/story/who-pressed-send/",
+   "2": "/en/story/the-red-button/",
+   "3": "/en/story/humans-welcome-to-watch/",
+   "4": "/en/story/the-fourth-vote/"
   },
   "sala": {
    "titolo": "The Room — Before You Press Send · Morgan Vale",
