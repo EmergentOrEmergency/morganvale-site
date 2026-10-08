@@ -56,4 +56,12 @@
 <xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/storia/il-quarto-voto/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/story/the-fourth-vote/"/>
 </url>
+<url><loc>https://morganvale.eu/notizie/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/"/>
+</url>
+<url><loc>https://morganvale.eu/en/news/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/"/>
+</url>
 </urlset>

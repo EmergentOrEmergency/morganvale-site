@@ -1,0 +1,35 @@
+/* sezione Notizie: galleria, schede, ultime schede in home */
+.nz-grid{list-style:none;margin:2rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.nz-grid li{background:var(--bg);margin:0}
+.nz-card{display:block;height:100%;box-sizing:border-box;padding:1.6rem 1.5rem 1.8rem;text-decoration:none;color:var(--ink);transition:background .3s}
+.nz-card:hover,.nz-card:focus-visible{background:var(--bg2)}
+.nz-card time,.nz-data time,.nz-data{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.nz-card h3{font-weight:400;font-size:1.5rem;line-height:1.2;margin:.7rem 0 .6rem}
+.nz-card p{margin:0;font-size:1.05rem;line-height:1.5;color:var(--mute)}
+.nz-all{margin:1.6rem 0 0;font-family:var(--sans);font-size:.92rem}
+.nz-all a,.notizie .muted a,.nz-back{color:var(--ink);text-decoration:underline;text-decoration-color:#c9b98a66;text-underline-offset:3px}
+.nz-all a:hover,.notizie .muted a:hover,.nz-back:hover{text-decoration-color:var(--accent)}
+.notizie.nz-home{max-width:1100px}
+.nz-vuoto{color:var(--mute);font-style:italic;margin:2rem 0 0}
+.nz-back{text-transform:none;letter-spacing:.04em}
+.nz-intro{max-width:46ch}
+
+.nz-main{max-width:760px}
+.notizie-pg h1{font-size:clamp(2.2rem,7vw,4.2rem);line-height:1.05;overflow-wrap:anywhere}
+.nz-data{margin:0 0 1rem}
+.nz-art{margin-top:2.5rem}
+.nz-sez{margin:0 0 2.6rem;padding:0}
+.nz-fonti{padding:1.3rem 1.4rem}
+.nz-sez h2{font-family:"IBM Plex Mono",ui-monospace,monospace;font-weight:400;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 .9rem}
+.nz-sez p{margin:0 0 1.2rem;font-size:1.3rem;line-height:1.65}
+.nz-circolato{font-style:italic;color:var(--mute);border-left:2px solid #6f6c64;padding-left:1.1rem}
+.nz-s-capitolo a{color:var(--ink);text-decoration:underline;text-decoration-color:#c9b98a66;text-underline-offset:3px}
+.nz-fonti{border:1px solid var(--line);background:var(--bg2);font-family:var(--sans);font-size:.9rem;line-height:1.55}
+.nz-fonti h2{margin-bottom:.7rem}
+.nz-leggi{border-top:1px solid var(--line);padding-top:2rem;margin-top:1rem}
+.nz-leggi p{margin:0 0 1rem;color:var(--mute)}
+.nz-leggi .nz-leggi-t{font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.4rem}
+.nz-leggi .buy{display:flex;flex-wrap:wrap;gap:.8rem}
+.notizie-pg .caso-nav{flex-wrap:wrap}
+.notizie-pg .caso-nav a:last-child:not(:first-child){margin-left:auto;text-align:right}
+@media (max-width:600px){.nz-sez p{font-size:1.2rem}.notizie-pg .caso-main{padding-inline:16px}}
