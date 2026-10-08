@@ -32,7 +32,18 @@ html,body.sala{height:100%;overflow:hidden;background:#03050a;overscroll-behavio
 .pad button{width:3.4rem;height:3.4rem;border-radius:50%;border:1px solid var(--line);background:#05080fcc;color:var(--ink);font-size:1.1rem;touch-action:none;-webkit-user-select:none;user-select:none}
 .pad button:active{border-color:var(--accent)}
 
-.fail{position:fixed;z-index:9;left:50%;top:45%;transform:translateX(-50%);text-align:center;color:var(--ink);font-size:1.3rem}
-.fail a{color:var(--accent)}
+.pad[hidden],.hint[hidden],.intro-msg[hidden]{display:none}
 
-.pad[hidden],.fail[hidden],.hint[hidden],.intro-msg[hidden]{display:none}
+/* paracadute: versione semplice quando la sala 3D non si apre */
+.sala-fb-box{position:relative;z-index:4;max-width:44rem;margin:0 auto;padding:6rem 1rem 3rem;color:var(--ink)}
+.sala-fb-box h1{font-weight:400;font-size:clamp(2rem,7vw,3rem);line-height:1.1;margin:0 0 1.2rem}
+.sala-fb-box .sf-msg{font-size:1.2rem;margin:0}
+.sala-fb-box h2{font-weight:400;font-size:1.5rem;margin:2.4rem 0 0;padding-top:1.4rem;border-top:1px solid var(--line)}
+.sala-fb-box ol{list-style:none;margin:0;padding:0}
+.sala-fb-box li{padding:1.1rem 0;border-bottom:1px solid var(--line)}
+.sala-fb-box li a{color:var(--ink);text-decoration:none;font-size:1.2rem;overflow-wrap:anywhere}
+.sala-fb-box li a:hover,.sala-fb-box li a:focus-visible{color:var(--accent)}
+.sala-fb-box li p{margin:.3rem 0 0;font-size:1.02rem;line-height:1.5;color:var(--mute)}
+.sala-fb-box .btn{display:inline-block;margin-top:2rem}
+html.sala-fb,html.sala-fb body.sala{height:auto;overflow:auto}
+html.sala-fb #c,html.sala-fb .film,html.sala-fb .intro-msg,html.sala-fb .caption,html.sala-fb .hint,html.sala-fb .pad,html.sala-fb .stage{display:none}

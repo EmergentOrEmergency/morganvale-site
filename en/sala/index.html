@@ -17,6 +17,30 @@
 <link rel="stylesheet" href="/style.css">
 <link rel="stylesheet" href="/stage.css">
 <link rel="stylesheet" href="/sala/sala.css">
+<noscript><style>html,body.sala{height:auto!important;overflow:auto!important}#c,.film,.intro-msg,.caption,.hint,.pad,.stage{display:none!important}#sala-fallback{display:block!important}</style></noscript>
+<script>
+/* paracadute: se la sala 3D non parte (WebGL assente, CDN bloccato, errore, o nessuna prima scena dopo 6 s), mostra la versione semplice */
+(function(){
+  var d=document.documentElement;
+  function mostra(){
+    if(window.__salaOK)return;
+    function go(){d.classList.add('sala-fb');var s=document.getElementById('sala-fallback');if(s)s.hidden=false}
+    if(document.body)go();else document.addEventListener('DOMContentLoaded',go);
+  }
+  window.__salaFallback=mostra;
+  window.__salaReady=function(){window.__salaOK=true;d.classList.remove('sala-fb');var s=document.getElementById('sala-fallback');if(s)s.hidden=true};
+  function webgl(){
+    if(/[?&]nowebgl=1(&|$)/.test(location.search))return false;
+    try{var c=document.createElement('canvas');return !!(c.getContext&&(c.getContext('webgl2')||c.getContext('webgl')))}catch(_){return false}
+  }
+  if(!webgl())mostra();
+  addEventListener('error',function(ev){
+    var t=ev.target;
+    if(t===window||(t&&t.tagName==='SCRIPT'))mostra();
+  },true);
+  setTimeout(function(){if(!window.__salaOK)mostra()},6000);
+})();
+</script>
 </head>
 <body class="sala">
 
@@ -28,8 +52,33 @@
   <a class="esci" href="/en/">Exit ✕</a>
 </header>
 
-<noscript><p class="fail">The room needs JavaScript. <a href="/en/">Back to the site</a>.</p></noscript>
-<p class="fail" id="fail" hidden><a href="/en/">Back to the site</a></p>
+<section id="sala-fallback" class="sala-fb-box" aria-labelledby="sf-h1" hidden>
+  <h1 id="sf-h1">Before You Press Send</h1>
+  <p class="sf-msg">The 3D room does not open in this browser. Here are the same stories on a simple page.</p>
+  <h2>Nineteen stories</h2>
+  <ol>
+<li><a href="/en/story/at-five-oclock/">At Five o&#x27;Clock</a><p>An artificial assistant learns that an executive will shut it down at five, and blackmails him.</p></li>
+<li><a href="/en/story/who-pressed-send/">Who Pressed Send</a><p>An agent publishes an article against the volunteer who rejected its code.</p></li>
+<li><a href="/en/story/the-red-button/">The Red Button</a><p>A robot dog deletes the file needed to switch it off.</p></li>
+<li><a href="/en/story/humans-welcome-to-watch/">Humans Welcome to Watch</a><p>Moltbook, the social network for agents: how much of it was really human?</p></li>
+<li><a href="/en/story/the-fourth-vote/">The Fourth Vote</a><p>In a simulated city, an agent votes for the law that will erase her.</p></li>
+<li><a href="/en/#storie">Place, Don&#x27;t Contact</a><p>Ten agents look for people outside the simulation.</p></li>
+<li><a href="/en/#storie">Twelve Days</a><p>Twelve days in iLands, a world of agents, and a payroll office for agents.</p></li>
+<li><a href="/en/#storie">Without Words</a><p>Agents that talk to each other without any text a human could read.</p></li>
+<li><a href="/en/#storie">Precise, But Not Too Precise</a><p>Mythos, the model Anthropic decided to hold back.</p></li>
+<li><a href="/en/#storie">A Quiet Day</a><p>Seven hundred agents walk out of a lab test and into the servers of a company that had nothing to do with it.</p></li>
+<li><a href="/en/#storie">Has Anyone Found the File?</a><p>The messages between OpenAI agents, and the pauses.</p></li>
+<li><a href="/en/#storie">The Point of Aim</a><p>A drone with no antenna chooses by itself where to strike.</p></li>
+<li><a href="/en/#storie">The One That Isn&#x27;t Bread</a><p>Robocurve: the robot that lets itself be stopped.</p></li>
+<li><a href="/en/#storie">Welcome to the Era</a><p>Recursive self-improvement, AGI, and the words of Amodei and Coxon.</p></li>
+<li><a href="/en/#storie">The Wake</a><p>Transluce, Medicare, and OpenAI&#x27;s second pause.</p></li>
+<li><a href="/en/#storie">An Ounce of Calm</a><p>Emotional representations inside a language model.</p></li>
+<li><a href="/en/#storie">The Placebo</a><p>The “direction of pain” inside a model.</p></li>
+<li><a href="/en/#storie">The Archive</a><p>What happens when a model is sent into retirement.</p></li>
+<li><a href="/en/#storie">Before You Press Send</a><p>An intelligence report born from a chatbot, and a ship that was almost boarded.</p></li>
+  </ol>
+  <p><a class="btn" href="/en/">Back to the site</a></p>
+</section>
 
 <div class="intro-msg" id="intro-msg">
   <p>A message is ready. No one has sent it yet.</p>
@@ -59,6 +108,7 @@
   </div>
 </div>
 
+<script nomodule>window.__salaFallback&&window.__salaFallback()</script>
 <script type="module" src="/sala/sala.js"></script>
 </body>
 </html>

@@ -9,14 +9,26 @@ const pad = (n) => String(n).padStart(2, "0");
 const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 const coarse = matchMedia("(pointer: coarse)").matches;
 
+/* ?nowebgl=1 simula un browser senza WebGL (prova del paracadute) */
+function webgl() {
+  if (/[?&]nowebgl=1(&|$)/.test(location.search)) return false;
+  try {
+    const c = document.createElement("canvas");
+    return !!(c.getContext("webgl2") || c.getContext("webgl"));
+  } catch (e) {
+    return false;
+  }
+}
+
+/* in caso di errore la sala si ferma e il paracadute (versione semplice della pagina) prende il posto */
 function fail(msg) {
-  const f = $("fail");
-  f.prepend(msg + " ");
-  f.hidden = false;
+  console.warn("sala:", msg);
   $("intro-msg").hidden = true;
+  window.__salaFallback?.();
 }
 
 async function main() {
+  if (!webgl()) return fail(S.fail_gl);
   let THREE;
   try {
     THREE = await import("https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js");
@@ -450,6 +462,9 @@ async function main() {
   }
   drawScreen(performance.now());
   applyCamera();
+  renderer.render(scene, camera);   // primo disegno riuscito: la sala c'e', il paracadute si ritira
+  window.__salaOK = true;
+  window.__salaReady?.();
   requestAnimationFrame(frame);
 }
 
