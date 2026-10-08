@@ -28,13 +28,23 @@ const PRODOTTI = {
 const TAGS = {
   // "www.amazon.it": { sito: "morganvale-21", linkedin: "mvlinkedin-21" },
 };
+// AGENTI: codici del programma di affiliazione per agenti AI (c=ag-<nome>, vedi /agents/).
+// tag_it / tag_us = ID Associates dell'agente per amazon.it / amazon.com (vuoto = si usa TAGS).
+// attivo:false = codice disattivato: il redirect funziona, ma senza tag dell'agente.
+// Un codice "ag-" non presente qui si comporta come disattivato.
+const AGENTI = {
+  "ag-example": { tag_it: "", tag_us: "", attivo: false },   // esempio: copiare, rinominare, mettere attivo:true
+};
 const q = new URLSearchParams(location.search);
 const p = PRODOTTI[q.get("p")];
 const c = (q.get("c") || "sito").replace(/[^a-z0-9_-]/gi, "").slice(0, 32);
 let dest = "https://morganvale.eu/";
 if (p) {
   dest = p.asin ? `https://${p.host}/dp/${p.asin}` : `https://${p.host}/s?k=${encodeURIComponent(p.cerca)}`;
-  const tag = TAGS[p.host] && (TAGS[p.host][c] || TAGS[p.host].sito);
+  let tag = TAGS[p.host] && (TAGS[p.host][c] || TAGS[p.host].sito);
+  const ag = c.startsWith("ag-") ? AGENTI[c.toLowerCase()] : null;
+  if (ag && ag.attivo) tag = (p.host === "www.amazon.it" ? ag.tag_it : p.host === "www.amazon.com" ? ag.tag_us : "") || tag;
+  else if (c.startsWith("ag-")) tag = TAGS[p.host] && TAGS[p.host].sito;   // sconosciuto o disattivato: nessun tag dell'agente
   if (tag) dest += (dest.includes("?") ? "&" : "?") + `tag=${encodeURIComponent(tag)}`;
 }
 document.getElementById("lnk").href = dest;
