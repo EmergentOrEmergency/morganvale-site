@@ -64,5 +64,13 @@
 <xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/"/>
 </url>
+<url><loc>https://morganvale.eu/notizie/722-dimostrazioni-tre-ritirate/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/722-dimostrazioni-tre-ritirate/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/722-proofs-three-withdrawn/"/>
+</url>
+<url><loc>https://morganvale.eu/en/news/722-proofs-three-withdrawn/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/722-dimostrazioni-tre-ritirate/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/722-proofs-three-withdrawn/"/>
+</url>
 <url><loc>https://morganvale.eu/agents/</loc></url>
 </urlset>
