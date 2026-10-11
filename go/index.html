@@ -50,7 +50,23 @@ if (p) {
   if (tag) dest += (dest.includes("?") ? "&" : "?") + `tag=${encodeURIComponent(tag)}`;
 }
 document.getElementById("lnk").href = dest;
-setTimeout(() => location.replace(dest), 150);
+// Conteggio del clic con GoatCounter (senza cookie): evento go/<prodotto>/<canale>.
+// Il reindirizzamento parte sempre, anche se il contatore è bloccato (al massimo dopo 1,2 s).
+window.goatcounter = { no_onload: true };
+const chiave = (q.get("p") || "x").replace(/[^a-z0-9_-]/gi, "").slice(0, 32);
+let andato = false;
+const vai = () => { if (!andato) { andato = true; location.replace(dest); } };
+const gc = document.createElement("script");
+gc.async = true;
+gc.src = "//gc.zgo.at/count.js";
+gc.dataset.goatcounter = "https://morganvale.goatcounter.com/count";
+gc.onload = () => {
+  try { window.goatcounter.count({ path: `go/${chiave}/${c}`, title: "Clic verso Amazon", event: true }); } catch (e) {}
+  setTimeout(vai, 400);
+};
+gc.onerror = vai;
+document.head.appendChild(gc);
+setTimeout(vai, 1200);
 </script>
 </body>
 </html>
