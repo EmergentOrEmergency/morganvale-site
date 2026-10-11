@@ -3,26 +3,74 @@
 <url><loc>https://morganvale.eu/</loc>
 <xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://morganvale.eu/es/"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://morganvale.eu/de/"/>
 </url>
 <url><loc>https://morganvale.eu/en/</loc>
 <xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://morganvale.eu/es/"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://morganvale.eu/de/"/>
+</url>
+<url><loc>https://morganvale.eu/es/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://morganvale.eu/es/"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://morganvale.eu/de/"/>
+</url>
+<url><loc>https://morganvale.eu/de/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://morganvale.eu/es/"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://morganvale.eu/de/"/>
 </url>
 <url><loc>https://morganvale.eu/sala/</loc>
 <xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/sala/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/sala/"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://morganvale.eu/es/sala/"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://morganvale.eu/de/sala/"/>
 </url>
 <url><loc>https://morganvale.eu/en/sala/</loc>
 <xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/sala/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/sala/"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://morganvale.eu/es/sala/"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://morganvale.eu/de/sala/"/>
+</url>
+<url><loc>https://morganvale.eu/es/sala/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/sala/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/sala/"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://morganvale.eu/es/sala/"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://morganvale.eu/de/sala/"/>
+</url>
+<url><loc>https://morganvale.eu/de/sala/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/sala/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/sala/"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://morganvale.eu/es/sala/"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://morganvale.eu/de/sala/"/>
 </url>
 <url><loc>https://morganvale.eu/storia/alle-cinque/</loc>
 <xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/storia/alle-cinque/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/story/at-five-oclock/"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://morganvale.eu/es/historia/a-las-cinco/"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://morganvale.eu/de/geschichte/um-fuenf-uhr/"/>
 </url>
 <url><loc>https://morganvale.eu/en/story/at-five-oclock/</loc>
 <xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/storia/alle-cinque/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/story/at-five-oclock/"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://morganvale.eu/es/historia/a-las-cinco/"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://morganvale.eu/de/geschichte/um-fuenf-uhr/"/>
+</url>
+<url><loc>https://morganvale.eu/es/historia/a-las-cinco/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/storia/alle-cinque/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/story/at-five-oclock/"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://morganvale.eu/es/historia/a-las-cinco/"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://morganvale.eu/de/geschichte/um-fuenf-uhr/"/>
+</url>
+<url><loc>https://morganvale.eu/de/geschichte/um-fuenf-uhr/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/storia/alle-cinque/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/story/at-five-oclock/"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://morganvale.eu/es/historia/a-las-cinco/"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://morganvale.eu/de/geschichte/um-fuenf-uhr/"/>
 </url>
 <url><loc>https://morganvale.eu/storia/chi-ha-premuto-invio/</loc>
 <xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/storia/chi-ha-premuto-invio/"/>
@@ -59,10 +107,26 @@
 <url><loc>https://morganvale.eu/notizie/</loc>
 <xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://morganvale.eu/es/noticias/"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://morganvale.eu/de/neuigkeiten/"/>
 </url>
 <url><loc>https://morganvale.eu/en/news/</loc>
 <xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://morganvale.eu/es/noticias/"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://morganvale.eu/de/neuigkeiten/"/>
+</url>
+<url><loc>https://morganvale.eu/es/noticias/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://morganvale.eu/es/noticias/"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://morganvale.eu/de/neuigkeiten/"/>
+</url>
+<url><loc>https://morganvale.eu/de/neuigkeiten/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/"/>
+<xhtml:link rel="alternate" hreflang="es" href="https://morganvale.eu/es/noticias/"/>
+<xhtml:link rel="alternate" hreflang="de" href="https://morganvale.eu/de/neuigkeiten/"/>
 </url>
 <url><loc>https://morganvale.eu/notizie/722-dimostrazioni-tre-ritirate/</loc>
 <xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/722-dimostrazioni-tre-ritirate/"/>

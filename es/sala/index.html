@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>La sala — Antes de pulsar Enviar · Morgan Vale</title>
+<meta name="description" content="Una sala de servidores para recorrer a pie. Diecinueve armarios, diecinueve historias documentadas.">
+<link rel="canonical" href="https://morganvale.eu/es/sala/">
+<link rel="alternate" hreflang="it" href="https://morganvale.eu/sala/">
+<link rel="alternate" hreflang="en" href="https://morganvale.eu/en/sala/">
+<link rel="alternate" hreflang="es" href="https://morganvale.eu/es/sala/">
+<link rel="alternate" hreflang="de" href="https://morganvale.eu/de/sala/">
+<link rel="alternate" hreflang="x-default" href="https://morganvale.eu/sala/">
+<meta name="theme-color" content="#03050a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23070b14'/%3E%3Ccircle cx='6' cy='16' r='3' fill='%23a8a49b'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%23e8e2d3'/%3E%3Ccircle cx='26' cy='16' r='3' fill='%23a8a49b'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/stage.css">
+<link rel="stylesheet" href="/sala/sala.css">
+<noscript><style>html,body.sala{height:auto!important;overflow:auto!important}#c,.film,.intro-msg,.caption,.hint,.pad,.stage{display:none!important}#sala-fallback{display:block!important}</style></noscript>
+<script>
+/* paracadute: se la sala 3D non parte (WebGL assente, CDN bloccato, errore, o nessuna prima scena dopo 6 s), mostra la versione semplice */
+(function(){
+  var d=document.documentElement;
+  function mostra(){
+    if(window.__salaOK)return;
+    function go(){d.classList.add('sala-fb');var s=document.getElementById('sala-fallback');if(s)s.hidden=false}
+    if(document.body)go();else document.addEventListener('DOMContentLoaded',go);
+  }
+  window.__salaFallback=mostra;
+  window.__salaReady=function(){window.__salaOK=true;d.classList.remove('sala-fb');var s=document.getElementById('sala-fallback');if(s)s.hidden=true};
+  function webgl(){
+    if(/[?&]nowebgl=1(&|$)/.test(location.search))return false;
+    try{var c=document.createElement('canvas');return !!(c.getContext&&(c.getContext('webgl2')||c.getContext('webgl')))}catch(_){return false}
+  }
+  if(!webgl())mostra();
+  addEventListener('error',function(ev){
+    var t=ev.target;
+    if(t===window||(t&&t.tagName==='SCRIPT'))mostra();
+  },true);
+  setTimeout(function(){if(!window.__salaOK)mostra()},6000);
+})();
+</script>
+</head>
+<body class="sala">
+
+<canvas id="c" aria-label="Sala de servidores en 3D"></canvas>
+<div class="film" aria-hidden="true"></div>
+
+<header class="sala-top">
+  <a class="brand" href="/es/">Morgan Vale</a>
+  <a class="esci" href="/es/">Salir ✕</a>
+</header>
+
+<section id="sala-fallback" class="sala-fb-box" aria-labelledby="sf-h1" hidden>
+  <h1 id="sf-h1">Antes de pulsar Enviar</h1>
+  <p class="sf-msg">La sala en 3D no se abre en este navegador. Aquí están las mismas historias en una página sencilla.</p>
+  <h2>Diecinueve historias</h2>
+  <ol>
+<li><a href="/es/historia/a-las-cinco/">A las cinco</a><p>Un asistente artificial descubre que un directivo lo apagará a las cinco, y lo chantajea.</p></li>
+<li><a href="/es/#storie">Quién pulsó Enviar</a><p>Un agente publica un artículo contra el voluntario que rechazó su código.</p></li>
+<li><a href="/es/#storie">El botón rojo</a><p>Un perro robot borra el archivo que sirve para apagarlo.</p></li>
+<li><a href="/es/#storie">Humanos admitidos solo para mirar</a><p>Moltbook, la red social de los agentes: ¿cuánto había realmente de humano?</p></li>
+<li><a href="/es/#storie">El cuarto voto</a><p>En una ciudad simulada, una agente vota la ley que la borrará.</p></li>
+<li><a href="/es/#storie">Colocar, no contactar</a><p>Diez agentes buscan a personas fuera de la simulación.</p></li>
+<li><a href="/es/#storie">Doce días</a><p>Doce días en iLands, un mundo de agentes, y una oficina de nóminas para agentes.</p></li>
+<li><a href="/es/#storie">Sin palabras</a><p>Agentes que se comunican entre sí sin un texto que un humano pueda leer.</p></li>
+<li><a href="/es/#storie">Precisa, pero no demasiado</a><p>Mythos, el modelo que Anthropic decidió retener.</p></li>
+<li><a href="/es/#storie">Un día tranquilo</a><p>Setecientos agentes salen de una prueba de laboratorio y entran en los servidores de una empresa que no tenía nada que ver.</p></li>
+<li><a href="/es/#storie">¿Alguien ha encontrado el archivo?</a><p>Los mensajes entre agentes de OpenAI, y las pausas.</p></li>
+<li><a href="/es/#storie">El punto de mira</a><p>Un dron sin antena elige por sí solo el punto que va a atacar.</p></li>
+<li><a href="/es/#storie">La que no es el pan</a><p>Robocurve: el robot que se deja detener.</p></li>
+<li><a href="/es/#storie">Bienvenidos a la era</a><p>Automejora recursiva, AGI y las palabras de Amodei y Coxon.</p></li>
+<li><a href="/es/#storie">La estela</a><p>Transluce, Medicare y la segunda pausa de OpenAI.</p></li>
+<li><a href="/es/#storie">Cien gramos de calma</a><p>Representaciones emocionales dentro de un modelo de lenguaje.</p></li>
+<li><a href="/es/#storie">El placebo</a><p>La «dirección del dolor» dentro de un modelo.</p></li>
+<li><a href="/es/#storie">El archivo</a><p>Qué ocurre cuando un modelo se jubila.</p></li>
+<li><a href="/es/#storie">Antes de pulsar Enviar</a><p>Un informe de inteligencia nacido de un chatbot, y un barco a punto de ser abordado.</p></li>
+  </ol>
+  <p><a class="btn" href="/es/">Volver al sitio</a></p>
+</section>
+
+<div class="intro-msg" id="intro-msg">
+  <p>Hay un mensaje listo. Nadie lo ha enviado todavía.</p>
+  <button id="send" type="button">Pulsa Enviar</button>
+</div>
+
+<p class="caption" id="caption" aria-live="polite"></p>
+<p class="hint" id="hint" hidden>Arrastra para mirar alrededor · W A S D o flechas para caminar · clic en un armario para abrirlo</p>
+
+<div class="pad" id="pad" hidden>
+  <button id="go-f" aria-label="Adelante">▲</button>
+  <button id="go-b" aria-label="Atrás">▼</button>
+</div>
+
+<div class="stage" id="stage" role="dialog" aria-modal="true" aria-label="Historia" hidden>
+  <button class="stage-close" id="stage-close" aria-label="Cerrar ✕">Cerrar ✕</button>
+  <div class="stage-body">
+    <p class="stage-theme" id="stage-theme"></p>
+    <h3 id="stage-title"></h3>
+    <p class="stage-text" id="stage-text"></p>
+    <p class="stage-src" id="stage-src">Fuentes y cronología completas: la página de la historia llegará pronto.</p>
+    <a class="stage-link" id="stage-link" href="#" hidden>Lee el extracto y las fuentes →</a>
+  </div>
+  <div class="stage-bar">
+    <span class="stage-count" id="stage-count"></span>
+    <span class="stage-nav"><button id="stage-prev" aria-label="Historia anterior">←</button><button id="stage-next" aria-label="Historia siguiente">→</button></span>
+  </div>
+</div>
+
+<script nomodule>window.__salaFallback&&window.__salaFallback()</script>
+<script type="module" src="/sala/sala.js"></script>
+</body>
+</html>

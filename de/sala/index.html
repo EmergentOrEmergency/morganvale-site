@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Der Raum — Bevor Sie auf Senden drücken · Morgan Vale</title>
+<meta name="description" content="Ein Serverraum zum Durchschreiten. Neunzehn Racks, neunzehn dokumentierte Geschichten.">
+<link rel="canonical" href="https://morganvale.eu/de/sala/">
+<link rel="alternate" hreflang="it" href="https://morganvale.eu/sala/">
+<link rel="alternate" hreflang="en" href="https://morganvale.eu/en/sala/">
+<link rel="alternate" hreflang="es" href="https://morganvale.eu/es/sala/">
+<link rel="alternate" hreflang="de" href="https://morganvale.eu/de/sala/">
+<link rel="alternate" hreflang="x-default" href="https://morganvale.eu/sala/">
+<meta name="theme-color" content="#03050a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23070b14'/%3E%3Ccircle cx='6' cy='16' r='3' fill='%23a8a49b'/%3E%3Ccircle cx='16' cy='16' r='3.5' fill='%23e8e2d3'/%3E%3Ccircle cx='26' cy='16' r='3' fill='%23a8a49b'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/stage.css">
+<link rel="stylesheet" href="/sala/sala.css">
+<noscript><style>html,body.sala{height:auto!important;overflow:auto!important}#c,.film,.intro-msg,.caption,.hint,.pad,.stage{display:none!important}#sala-fallback{display:block!important}</style></noscript>
+<script>
+/* paracadute: se la sala 3D non parte (WebGL assente, CDN bloccato, errore, o nessuna prima scena dopo 6 s), mostra la versione semplice */
+(function(){
+  var d=document.documentElement;
+  function mostra(){
+    if(window.__salaOK)return;
+    function go(){d.classList.add('sala-fb');var s=document.getElementById('sala-fallback');if(s)s.hidden=false}
+    if(document.body)go();else document.addEventListener('DOMContentLoaded',go);
+  }
+  window.__salaFallback=mostra;
+  window.__salaReady=function(){window.__salaOK=true;d.classList.remove('sala-fb');var s=document.getElementById('sala-fallback');if(s)s.hidden=true};
+  function webgl(){
+    if(/[?&]nowebgl=1(&|$)/.test(location.search))return false;
+    try{var c=document.createElement('canvas');return !!(c.getContext&&(c.getContext('webgl2')||c.getContext('webgl')))}catch(_){return false}
+  }
+  if(!webgl())mostra();
+  addEventListener('error',function(ev){
+    var t=ev.target;
+    if(t===window||(t&&t.tagName==='SCRIPT'))mostra();
+  },true);
+  setTimeout(function(){if(!window.__salaOK)mostra()},6000);
+})();
+</script>
+</head>
+<body class="sala">
+
+<canvas id="c" aria-label="Serverraum in 3D"></canvas>
+<div class="film" aria-hidden="true"></div>
+
+<header class="sala-top">
+  <a class="brand" href="/de/">Morgan Vale</a>
+  <a class="esci" href="/de/">Verlassen ✕</a>
+</header>
+
+<section id="sala-fallback" class="sala-fb-box" aria-labelledby="sf-h1" hidden>
+  <h1 id="sf-h1">Bevor Sie auf Senden drücken</h1>
+  <p class="sf-msg">Der 3D-Raum öffnet sich in diesem Browser nicht. Hier sind dieselben Geschichten auf einer einfachen Seite.</p>
+  <h2>Neunzehn Geschichten</h2>
+  <ol>
+<li><a href="/de/geschichte/um-fuenf-uhr/">Um fünf Uhr</a><p>Ein künstlicher Assistent erfährt, dass ein Manager ihn um fünf Uhr abschalten wird, und erpresst ihn.</p></li>
+<li><a href="/de/#storie">Wer auf Senden drückte</a><p>Ein Agent veröffentlicht einen Artikel gegen den Freiwilligen, der seinen Code abgelehnt hat.</p></li>
+<li><a href="/de/#storie">Der rote Knopf</a><p>Ein Roboterhund löscht die Datei, mit der man ihn ausschalten könnte.</p></li>
+<li><a href="/de/#storie">Menschen dürfen zuschauen</a><p>Moltbook, das soziale Netzwerk der Agenten: Wie viel war wirklich menschlich?</p></li>
+<li><a href="/de/#storie">Die vierte Stimme</a><p>In einer simulierten Stadt stimmt eine Agentin für das Gesetz, das sie löschen wird.</p></li>
+<li><a href="/de/#storie">Platzieren, nicht kontaktieren</a><p>Zehn Agenten suchen nach Menschen außerhalb der Simulation.</p></li>
+<li><a href="/de/#storie">Zwölf Tage</a><p>Zwölf Tage in iLands, einer Welt der Agenten, und ein Lohnbüro für Agenten.</p></li>
+<li><a href="/de/#storie">Ohne Worte</a><p>Agenten, die miteinander kommunizieren, ohne dass ein Mensch den Text lesen kann.</p></li>
+<li><a href="/de/#storie">Genau, aber nicht zu genau</a><p>Mythos, das Modell, das Anthropic zurückhielt.</p></li>
+<li><a href="/de/#storie">Ein ruhiger Tag</a><p>Siebenhundert Agenten verlassen einen Labortest und dringen in die Server eines Unternehmens ein, das nichts damit zu tun hatte.</p></li>
+<li><a href="/de/#storie">Hat jemand die Datei gefunden?</a><p>Die Nachrichten zwischen OpenAI-Agenten, und die Pausen.</p></li>
+<li><a href="/de/#storie">Der Zielpunkt</a><p>Eine Drohne ohne Antenne wählt selbst den Punkt, den sie trifft.</p></li>
+<li><a href="/de/#storie">Die, die kein Brot ist</a><p>Robocurve: der Roboter, der sich anhalten lässt.</p></li>
+<li><a href="/de/#storie">Willkommen in der Ära</a><p>Rekursive Selbstverbesserung, AGI und die Worte von Amodei und Coxon.</p></li>
+<li><a href="/de/#storie">Die Spur</a><p>Transluce, Medicare und die zweite Pause von OpenAI.</p></li>
+<li><a href="/de/#storie">Hundert Gramm Ruhe</a><p>Emotionale Repräsentationen im Inneren eines Sprachmodells.</p></li>
+<li><a href="/de/#storie">Das Placebo</a><p>Die „Richtung des Schmerzes“ im Inneren eines Modells.</p></li>
+<li><a href="/de/#storie">Das Archiv</a><p>Was geschieht, wenn ein Modell in den Ruhestand geschickt wird.</p></li>
+<li><a href="/de/#storie">Bevor Sie auf Senden drücken</a><p>Ein Geheimdienstbericht, der aus einem Chatbot entstand, und ein Schiff, das beinahe geentert wurde.</p></li>
+  </ol>
+  <p><a class="btn" href="/de/">Zurück zur Website</a></p>
+</section>
+
+<div class="intro-msg" id="intro-msg">
+  <p>Eine Nachricht ist fertig. Noch hat sie niemand gesendet.</p>
+  <button id="send" type="button">Senden drücken</button>
+</div>
+
+<p class="caption" id="caption" aria-live="polite"></p>
+<p class="hint" id="hint" hidden>Ziehen, um sich umzusehen · W A S D oder Pfeiltasten zum Gehen · Klick auf ein Rack öffnet es</p>
+
+<div class="pad" id="pad" hidden>
+  <button id="go-f" aria-label="Vor">▲</button>
+  <button id="go-b" aria-label="Zurück">▼</button>
+</div>
+
+<div class="stage" id="stage" role="dialog" aria-modal="true" aria-label="Geschichte" hidden>
+  <button class="stage-close" id="stage-close" aria-label="Schließen ✕">Schließen ✕</button>
+  <div class="stage-body">
+    <p class="stage-theme" id="stage-theme"></p>
+    <h3 id="stage-title"></h3>
+    <p class="stage-text" id="stage-text"></p>
+    <p class="stage-src" id="stage-src">Vollständige Quellen und Chronologie: Die Seite zur Geschichte folgt in Kürze.</p>
+    <a class="stage-link" id="stage-link" href="#" hidden>Auszug und Quellen lesen →</a>
+  </div>
+  <div class="stage-bar">
+    <span class="stage-count" id="stage-count"></span>
+    <span class="stage-nav"><button id="stage-prev" aria-label="Vorherige Geschichte">←</button><button id="stage-next" aria-label="Nächste Geschichte">→</button></span>
+  </div>
+</div>
+
+<script nomodule>window.__salaFallback&&window.__salaFallback()</script>
+<script type="module" src="/sala/sala.js"></script>
+</body>
+</html>

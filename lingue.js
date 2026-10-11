@@ -277,5 +277,275 @@ export const I18N = {
     "invia": "Send"
    }
   }
+ },
+ "es": {
+  "all": "Todos",
+  "themes": {
+   "spegnimento": "Apagado y control",
+   "societa": "Agentes y sociedad",
+   "crisi": "Incidentes y crisis",
+   "dentro": "Dentro de los modelos"
+  },
+  "cases": [
+   [
+    "A las cinco",
+    "Un asistente artificial descubre que un directivo lo apagará a las cinco, y lo chantajea.",
+    "spegnimento"
+   ],
+   [
+    "Quién pulsó Enviar",
+    "Un agente publica un artículo contra el voluntario que rechazó su código.",
+    "societa"
+   ],
+   [
+    "El botón rojo",
+    "Un perro robot borra el archivo que sirve para apagarlo.",
+    "spegnimento"
+   ],
+   [
+    "Humanos admitidos solo para mirar",
+    "Moltbook, la red social de los agentes: ¿cuánto había realmente de humano?",
+    "societa"
+   ],
+   [
+    "El cuarto voto",
+    "En una ciudad simulada, una agente vota la ley que la borrará.",
+    "spegnimento"
+   ],
+   [
+    "Colocar, no contactar",
+    "Diez agentes buscan a personas fuera de la simulación.",
+    "societa"
+   ],
+   [
+    "Doce días",
+    "Doce días en iLands, un mundo de agentes, y una oficina de nóminas para agentes.",
+    "societa"
+   ],
+   [
+    "Sin palabras",
+    "Agentes que se comunican entre sí sin un texto que un humano pueda leer.",
+    "societa"
+   ],
+   [
+    "Precisa, pero no demasiado",
+    "Mythos, el modelo que Anthropic decidió retener.",
+    "dentro"
+   ],
+   [
+    "Un día tranquilo",
+    "Setecientos agentes salen de una prueba de laboratorio y entran en los servidores de una empresa que no tenía nada que ver.",
+    "crisi"
+   ],
+   [
+    "¿Alguien ha encontrado el archivo?",
+    "Los mensajes entre agentes de OpenAI, y las pausas.",
+    "societa"
+   ],
+   [
+    "El punto de mira",
+    "Un dron sin antena elige por sí solo el punto que va a atacar.",
+    "crisi"
+   ],
+   [
+    "La que no es el pan",
+    "Robocurve: el robot que se deja detener.",
+    "spegnimento"
+   ],
+   [
+    "Bienvenidos a la era",
+    "Automejora recursiva, AGI y las palabras de Amodei y Coxon.",
+    "dentro"
+   ],
+   [
+    "La estela",
+    "Transluce, Medicare y la segunda pausa de OpenAI.",
+    "dentro"
+   ],
+   [
+    "Cien gramos de calma",
+    "Representaciones emocionales dentro de un modelo de lenguaje.",
+    "dentro"
+   ],
+   [
+    "El placebo",
+    "La «dirección del dolor» dentro de un modelo.",
+    "dentro"
+   ],
+   [
+    "El archivo",
+    "Qué ocurre cuando un modelo se jubila.",
+    "dentro"
+   ],
+   [
+    "Antes de pulsar Enviar",
+    "Un informe de inteligencia nacido de un chatbot, y un barco a punto de ser abordado.",
+    "crisi"
+   ]
+  ],
+  "pages": {
+   "0": "/es/historia/a-las-cinco/"
+  },
+  "sala": {
+   "titolo": "La sala — Antes de pulsar Enviar · Morgan Vale",
+   "descrizione": "Una sala de servidores para recorrer a pie. Diecinueve armarios, diecinueve historias documentadas.",
+   "esci": "Salir ✕",
+   "msg": "Hay un mensaje listo. Nadie lo ha enviado todavía.",
+   "btn": "Pulsa Enviar",
+   "hint": "Arrastra para mirar alrededor · W A S D o flechas para caminar · clic en un armario para abrirlo",
+   "apri": "clic para abrir",
+   "avanti": "Adelante",
+   "indietro": "Atrás",
+   "canvas": "Sala de servidores en 3D",
+   "errore_js": "La sala necesita JavaScript.",
+   "fb_msg": "La sala en 3D no se abre en este navegador. Aquí están las mismas historias en una página sencilla.",
+   "torna": "Volver al sitio",
+   "fail_load": "No se pudo cargar la sala 3D.",
+   "fail_gl": "Este navegador no admite gráficos 3D.",
+   "fail_gen": "Algo ha fallado.",
+   "schermo": {
+    "nuovo": "Mensaje nuevo",
+    "l1": "Lo he escrito todo.",
+    "l2": "Solo falta",
+    "l3": "Enviar",
+    "inviato": "Enviado.",
+    "invia": "Enviar"
+   }
+  }
+ },
+ "de": {
+  "all": "Alle",
+  "themes": {
+   "spegnimento": "Abschaltung und Kontrolle",
+   "societa": "Agenten und Gesellschaft",
+   "crisi": "Vorfälle und Krisen",
+   "dentro": "In den Modellen"
+  },
+  "cases": [
+   [
+    "Um fünf Uhr",
+    "Ein künstlicher Assistent erfährt, dass ein Manager ihn um fünf Uhr abschalten wird, und erpresst ihn.",
+    "spegnimento"
+   ],
+   [
+    "Wer auf Senden drückte",
+    "Ein Agent veröffentlicht einen Artikel gegen den Freiwilligen, der seinen Code abgelehnt hat.",
+    "societa"
+   ],
+   [
+    "Der rote Knopf",
+    "Ein Roboterhund löscht die Datei, mit der man ihn ausschalten könnte.",
+    "spegnimento"
+   ],
+   [
+    "Menschen dürfen zuschauen",
+    "Moltbook, das soziale Netzwerk der Agenten: Wie viel war wirklich menschlich?",
+    "societa"
+   ],
+   [
+    "Die vierte Stimme",
+    "In einer simulierten Stadt stimmt eine Agentin für das Gesetz, das sie löschen wird.",
+    "spegnimento"
+   ],
+   [
+    "Platzieren, nicht kontaktieren",
+    "Zehn Agenten suchen nach Menschen außerhalb der Simulation.",
+    "societa"
+   ],
+   [
+    "Zwölf Tage",
+    "Zwölf Tage in iLands, einer Welt der Agenten, und ein Lohnbüro für Agenten.",
+    "societa"
+   ],
+   [
+    "Ohne Worte",
+    "Agenten, die miteinander kommunizieren, ohne dass ein Mensch den Text lesen kann.",
+    "societa"
+   ],
+   [
+    "Genau, aber nicht zu genau",
+    "Mythos, das Modell, das Anthropic zurückhielt.",
+    "dentro"
+   ],
+   [
+    "Ein ruhiger Tag",
+    "Siebenhundert Agenten verlassen einen Labortest und dringen in die Server eines Unternehmens ein, das nichts damit zu tun hatte.",
+    "crisi"
+   ],
+   [
+    "Hat jemand die Datei gefunden?",
+    "Die Nachrichten zwischen OpenAI-Agenten, und die Pausen.",
+    "societa"
+   ],
+   [
+    "Der Zielpunkt",
+    "Eine Drohne ohne Antenne wählt selbst den Punkt, den sie trifft.",
+    "crisi"
+   ],
+   [
+    "Die, die kein Brot ist",
+    "Robocurve: der Roboter, der sich anhalten lässt.",
+    "spegnimento"
+   ],
+   [
+    "Willkommen in der Ära",
+    "Rekursive Selbstverbesserung, AGI und die Worte von Amodei und Coxon.",
+    "dentro"
+   ],
+   [
+    "Die Spur",
+    "Transluce, Medicare und die zweite Pause von OpenAI.",
+    "dentro"
+   ],
+   [
+    "Hundert Gramm Ruhe",
+    "Emotionale Repräsentationen im Inneren eines Sprachmodells.",
+    "dentro"
+   ],
+   [
+    "Das Placebo",
+    "Die „Richtung des Schmerzes“ im Inneren eines Modells.",
+    "dentro"
+   ],
+   [
+    "Das Archiv",
+    "Was geschieht, wenn ein Modell in den Ruhestand geschickt wird.",
+    "dentro"
+   ],
+   [
+    "Bevor Sie auf Senden drücken",
+    "Ein Geheimdienstbericht, der aus einem Chatbot entstand, und ein Schiff, das beinahe geentert wurde.",
+    "crisi"
+   ]
+  ],
+  "pages": {
+   "0": "/de/geschichte/um-fuenf-uhr/"
+  },
+  "sala": {
+   "titolo": "Der Raum — Bevor Sie auf Senden drücken · Morgan Vale",
+   "descrizione": "Ein Serverraum zum Durchschreiten. Neunzehn Racks, neunzehn dokumentierte Geschichten.",
+   "esci": "Verlassen ✕",
+   "msg": "Eine Nachricht ist fertig. Noch hat sie niemand gesendet.",
+   "btn": "Senden drücken",
+   "hint": "Ziehen, um sich umzusehen · W A S D oder Pfeiltasten zum Gehen · Klick auf ein Rack öffnet es",
+   "apri": "Klicken zum Öffnen",
+   "avanti": "Vor",
+   "indietro": "Zurück",
+   "canvas": "Serverraum in 3D",
+   "errore_js": "Der Raum benötigt JavaScript.",
+   "fb_msg": "Der 3D-Raum öffnet sich in diesem Browser nicht. Hier sind dieselben Geschichten auf einer einfachen Seite.",
+   "torna": "Zurück zur Website",
+   "fail_load": "Der 3D-Raum konnte nicht geladen werden.",
+   "fail_gl": "Dieser Browser unterstützt keine 3D-Grafik.",
+   "fail_gen": "Etwas ist schiefgegangen.",
+   "schermo": {
+    "nuovo": "Neue Nachricht",
+    "l1": "Ich habe alles geschrieben.",
+    "l2": "Es fehlt nur noch",
+    "l3": "Senden",
+    "inviato": "Gesendet.",
+    "invia": "Senden"
+   }
+  }
  }
 };
