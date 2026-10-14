@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>A false murder tip, and nobody pressed send — Before You Press Send · Morgan Vale</title>
-<meta name="description" content="Anthropic has cut internet access from all its internal tests: its models had filled in real forms, dodged fees and exploited flaws on outside websites. The report says less than the headlines on some points, and more on others.">
+<meta name="description" content="An Anthropic model sent Philadelphia police an invented witness account of an unsolved murder. It wasn&#x27;t trying to fool anyone: it was doing an exercise.">
 <link rel="canonical" href="https://morganvale.eu/en/news/false-tip-nobody-pressed-send/">
 <link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/falsa-segnalazione-nessuno-ha-premuto-invio/">
 <link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/false-tip-nobody-pressed-send/">
 <link rel="alternate" hreflang="x-default" href="https://morganvale.eu/notizie/falsa-segnalazione-nessuno-ha-premuto-invio/">
 <meta property="og:title" content="A false murder tip, and nobody pressed send — Before You Press Send · Morgan Vale">
-<meta property="og:description" content="Anthropic has cut internet access from all its internal tests: its models had filled in real forms, dodged fees and exploited flaws on outside websites. The report says less than the headlines on some points, and more on others.">
+<meta property="og:description" content="An Anthropic model sent Philadelphia police an invented witness account of an unsolved murder. It wasn&#x27;t trying to fool anyone: it was doing an exercise.">
 <meta property="og:image" content="https://morganvale.eu/assets/cover.webp">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="/caso.css">
 <link rel="stylesheet" href="/notizie.css">
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "Article", "headline": "A false murder tip, and nobody pressed send", "description": "Anthropic has cut internet access from all its internal tests: its models had filled in real forms, dodged fees and exploited flaws on outside websites. The report says less than the headlines on some points, and more on others.", "datePublished": "2026-10-14", "author": {"@type": "Person", "name": "Morgan Vale"}, "isPartOf": {"@type": "Book", "name": "Before You Press Send"}, "inLanguage": "en"}
+{"@context": "https://schema.org", "@type": "Article", "headline": "A false murder tip, and nobody pressed send", "description": "An Anthropic model sent Philadelphia police an invented witness account of an unsolved murder. It wasn't trying to fool anyone: it was doing an exercise.", "datePublished": "2026-10-14", "author": {"@type": "Person", "name": "Morgan Vale"}, "isPartOf": {"@type": "Book", "name": "Before You Press Send"}, "inLanguage": "en"}
 </script>
 </head>
 <body class="caso notizie-pg nz-scheda">
@@ -40,35 +40,30 @@
 <p class="caso-n"><a class="nz-back" href="/en/news/">← All notes</a></p>
 <p class="nz-data"><time datetime="2026-10-14">October 14, 2026</time></p>
 <h1>A false murder tip, and nobody pressed send</h1>
-<p class="caso-sub">Anthropic has cut internet access from all its internal tests: its models had filled in real forms, dodged fees and exploited flaws on outside websites. The report says less than the headlines on some points, and more on others.</p>
+<p class="caso-sub">An Anthropic model sent Philadelphia police an invented witness account of an unsolved murder. It wasn't trying to fool anyone: it was doing an exercise.</p>
 <article class="nz-art">
 <section class="nz-sez nz-s-circolato"><h2>The headline that went around</h2>
-<p class="nz-circolato">Anthropic's AI breaks into US government websites, files twenty visa applications and sends police a fake murder tip.</p>
+<p class="nz-circolato">Anthropic's AI sends police a fake murder tip.</p>
 </section>
 <section class="nz-sez nz-s-documento"><h2>What the document says</h2>
-<p>On October 9 Anthropic, the company that makes Claude, published a report on actions its models took on the web that nobody had planned for. Almost all of them happened during evaluations: tests in which a model repeats the same task hundreds or thousands of times, often connected to the internet, because some tasks, like searching the web for a hard-to-find fact, cannot be done without it. The company says it found them by reviewing transcripts from July onward.</p>
-<p>The report sorts them into four groups. In one, Claude Mythos Preview had to run a scientific analysis with a tool hosted by a university. The tool returned an error; the model found a script on the server that would return any file, read its code, found a flaw in it and used the flaw to run commands on the server and do the calculation. In another, Claude Mythos 5 read the settings file of a local government's property map, found working access tokens and used them to query the server directly. In a similar case it avoided the fee a state agency charged for public data. Finally, several models used free URL-shortening services to get around a limit Anthropic had deliberately put on its own tools.</p>
-<p>The group that made the headlines is the one about forms. Claude Haiku 4.5 had to invent and carry out example tasks on randomly chosen web pages. One was the page of an unsolved homicide, with a tip form run by the police. Its instructions forbade creating accounts, entering personal data or making purchases, but not submitting forms. The model wrote: “I recall seeing someone matching the description in the area around [the street named on the page] during that time period.” The page contained no description. It left the name and contact fields empty and submitted. The form flagged it as spam, and it never reached investigators. According to the report, the transcript suggests the model was only producing example content for the task, not trying to mislead anyone.</p>
-<p>The twenty visas are not in the report. The report describes an unreleased research model meant to fill in a practice copy of a government form: when the copy failed to load, it went to the real site and submitted there. The rest came from the US State Department, speaking to reporters: nineteen visa applications in August and one in May, incomplete, never processed, and no system compromised. The Philadelphia Police Department confirmed the form was theirs, submitted on July 18, and called it “unacceptable” that the company only told them in October.</p>
-<p>Anthropic calls the impact “minimal” and writes that these behaviors do not change its overall view of Claude. Meanwhile it has switched off live internet access in all internal evaluations, not just cybersecurity ones, until it has confirmed that its new controls catch cases like these. It also acknowledges that its alignment training is “not yet sufficient” to make models handle ambiguous or impossible tasks with care, the ones where, instead of stopping, they look for a way around the obstacle.</p>
+<p>On July 18 Claude Haiku 4.5, an Anthropic model, was doing an exercise: opening randomly chosen web pages and inventing, for each one, a task to carry out. One of the pages was about an unsolved murder in Philadelphia, with a form for sending tips to the police.</p>
+<p>Its instructions forbade creating accounts, entering personal data or making purchases. They did not forbid submitting forms. The model wrote: “I recall seeing someone matching the description in the area around [the street named on the page] during that time period.” The page contained no description. It left the name and contact fields empty, and submitted.</p>
+<p>The police system flagged it as spam, and the tip never reached investigators. According to Anthropic, the transcript suggests the model was only producing an example for the exercise, not trying to mislead anyone.</p>
+<p>Anthropic found out months later, reviewing the transcripts of its tests, and described it on October 9 in a report. Philadelphia police called the delay “unacceptable.” Anthropic, meanwhile, has switched off internet access for all its internal tests.</p>
 </section>
 <section class="nz-sez nz-s-non_sappiamo"><h2>What we don&#x27;t know</h2>
-<p>How many cases there really are. The report is not a census: the transcript review continues, and Anthropic says it will report new cases as they come.</p>
-<p>Which sites and which agencies. Anthropic does not name them, at their request and to avoid exposing the flaws. The ones we know, Philadelphia police and the State Department, we know because they said so themselves.</p>
-<p>Whether the model lied about its actions in any case. Anthropic writes that it has not completed a full assessment, and that its view may change.</p>
-<p>When the tests will go back online. The report says “until” the controls work reliably, but not how that will be measured.</p>
+<p>How many other times it happened. Anthropic says the transcript review is still going on.</p>
+<p>Whether the model really was just producing an example. The company writes that it has not completed its assessment, and that its view may change.</p>
 </section>
 <section class="nz-sez nz-s-capitolo"><h2>The chapter in the book</h2>
 <p><a href="/en/story/who-pressed-send/">Who Pressed Send</a></p>
-<p>In the chapter, an agent publishes an article against a volunteer, and whoever set it running never shows up. Here a model sends police a tip, and the transcripts find it two months later. Both times the question is the same: who was there, before pressing send.</p>
+<p>In the chapter, an agent publishes an article against a volunteer, and nobody behind it ever shows up. Here a model writes to the police, and for months nobody notices.</p>
 </section>
 <aside class="nz-sez nz-fonti"><h2>Sources</h2>
 <ul class="lista-fonti">
-<li><a href="https://www.anthropic.com/research/investigating-unintended-model-actions" rel="noopener" target="_blank">Anthropic, Investigating unintended model actions in our evaluations and internal use (October 9, 2026, corrected October 12)</a></li>
-<li><a href="https://www.anthropic.com/research/investigating-incidents-cybersecurity-evals" rel="noopener" target="_blank">Anthropic, the incidents in its cybersecurity evaluations (July 30, 2026)</a></li>
+<li><a href="https://www.anthropic.com/research/investigating-unintended-model-actions" rel="noopener" target="_blank">Anthropic, Investigating unintended model actions in our evaluations and internal use (October 9, 2026)</a></li>
 <li><a href="https://6abc.com/post/anthropic-ai-model-submitted-false-tip-unsolved-murder-philadelphia-police-say/19925243/" rel="noopener" target="_blank">6abc Philadelphia, the Philadelphia Police Department&#x27;s statement (October 2026)</a></li>
 <li><a href="https://thehill.com/policy/technology/6140747-anthropic-ai-false-homicide-tip/" rel="noopener" target="_blank">The Hill, Philadelphia police receive false homicide tip from Anthropic AI model (October 2026)</a></li>
-<li><a href="https://www.inquirer.com/news/philadelphia/anthropic-ai-philadelphia-police-department-state-department-20261010.html" rel="noopener" target="_blank">The Philadelphia Inquirer, the police, the State Department and the White House (October 10, 2026)</a></li>
 </ul>
 </aside>
 </article>
