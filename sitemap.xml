@@ -136,5 +136,13 @@
 <xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/722-dimostrazioni-tre-ritirate/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/722-proofs-three-withdrawn/"/>
 </url>
+<url><loc>https://morganvale.eu/notizie/falsa-segnalazione-nessuno-ha-premuto-invio/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/falsa-segnalazione-nessuno-ha-premuto-invio/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/false-tip-nobody-pressed-send/"/>
+</url>
+<url><loc>https://morganvale.eu/en/news/false-tip-nobody-pressed-send/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/falsa-segnalazione-nessuno-ha-premuto-invio/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/false-tip-nobody-pressed-send/"/>
+</url>
 <url><loc>https://morganvale.eu/agents/</loc></url>
 </urlset>
