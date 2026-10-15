@@ -144,5 +144,13 @@
 <xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/falsa-segnalazione-nessuno-ha-premuto-invio/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/false-tip-nobody-pressed-send/"/>
 </url>
+<url><loc>https://morganvale.eu/notizie/ai-che-si-copia-da-sola/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/ai-che-si-copia-da-sola/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/ai-that-copies-itself/"/>
+</url>
+<url><loc>https://morganvale.eu/en/news/ai-that-copies-itself/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/ai-che-si-copia-da-sola/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/ai-that-copies-itself/"/>
+</url>
 <url><loc>https://morganvale.eu/agents/</loc></url>
 </urlset>
