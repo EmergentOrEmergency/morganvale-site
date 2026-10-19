@@ -153,4 +153,12 @@
 <xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/ai-that-copies-itself/"/>
 </url>
 <url><loc>https://morganvale.eu/agents/</loc></url>
+<url><loc>https://morganvale.eu/notizie/chi-diventera-senior/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/chi-diventera-senior/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/who-becomes-senior/"/>
+</url>
+<url><loc>https://morganvale.eu/en/news/who-becomes-senior/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/chi-diventera-senior/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/who-becomes-senior/"/>
+</url>
 </urlset>
