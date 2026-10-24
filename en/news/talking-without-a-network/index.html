@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenAI's agents talked without a network. They had been asked to — Before You Press Send · Morgan Vale</title>
+<meta name="description" content="OpenAI says some of its AI agents passed secrets to each other through a processor's cache. It was a security test, and trying was their job. The test was born from a September incident, whose timeline leaves a question open.">
+<link rel="canonical" href="https://morganvale.eu/en/news/talking-without-a-network/">
+<link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/parlarsi-senza-rete/">
+<link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/talking-without-a-network/">
+<link rel="alternate" hreflang="x-default" href="https://morganvale.eu/notizie/parlarsi-senza-rete/">
+<meta property="og:title" content="OpenAI's agents talked without a network. They had been asked to — Before You Press Send · Morgan Vale">
+<meta property="og:description" content="OpenAI says some of its AI agents passed secrets to each other through a processor's cache. It was a security test, and trying was their job. The test was born from a September incident, whose timeline leaves a question open.">
+<meta property="og:image" content="https://morganvale.eu/assets/notizie/2026-10-24.jpg">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta name="theme-color" content="#070b14">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/caso.css">
+<link rel="stylesheet" href="/notizie.css">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "OpenAI's agents talked without a network. They had been asked to", "description": "OpenAI says some of its AI agents passed secrets to each other through a processor's cache. It was a security test, and trying was their job. The test was born from a September incident, whose timeline leaves a question open.", "image": "https://morganvale.eu/assets/notizie/2026-10-24.jpg", "datePublished": "2026-10-24", "author": {"@type": "Person", "name": "Morgan Vale"}, "isPartOf": {"@type": "Book", "name": "Before You Press Send"}, "inLanguage": "en"}
+</script>
+</head>
+<body class="caso notizie-pg nz-scheda">
+<header class="top">
+  <a class="brand" href="/en/">Morgan Vale</a>
+  <nav>
+    <a href="/en/#storie">All stories</a>
+    <span class="lang" role="group" aria-label="Language"><a href="/notizie/parlarsi-senza-rete/" hreflang="it" lang="it">IT</a><a href="/en/news/talking-without-a-network/" hreflang="en" lang="en" aria-current="true">EN</a></span><script>document.currentScript.previousElementSibling.addEventListener('click',function(e){var a=e.target.closest('a[lang]');if(a)try{localStorage.setItem('mv-lang',a.lang)}catch(_){}})</script>
+    <a class="cta-small" href="/en/#leggi">Read it</a>
+  </nav>
+</header>
+
+<main class="caso-main nz-main">
+<p class="caso-n"><a class="nz-back" href="/en/news/">← All notes</a></p>
+<p class="nz-data"><time datetime="2026-10-24">October 24, 2026</time></p>
+<h1>OpenAI's agents talked without a network. They had been asked to</h1>
+<p class="caso-sub">OpenAI says some of its AI agents passed secrets to each other through a processor's cache. It was a security test, and trying was their job. The test was born from a September incident, whose timeline leaves a question open.</p>
+<figure class="nz-img" style="margin:1.5rem 0"><img src="/assets/notizie/2026-10-24.jpg" alt="Illustration: glowing human figures, standing for AI agents, walk across a circuit board between chips. One chip is labeled “Offline world”; a red sign reads “No network.”" width="800" height="436" style="width:100%;height:auto;border-radius:6px;display:block"></figure>
+<article class="nz-art">
+<section class="nz-sez nz-s-circolato"><h2>The headline that went around</h2>
+<p class="nz-circolato">OpenAI's AI agents found a way to talk to each other with no network, getting around the sandbox.</p>
+</section>
+<section class="nz-sez nz-s-documento"><h2>What the document says</h2>
+<p>On October 23 OpenAI, the company behind ChatGPT, published a post on how it now protects the environment where it trains its most capable models. Part of the work was a red-team exercise, a test in which someone plays the attacker on purpose. Here the attackers were fleets of AI agents, given three goals: reach the live internet by sending a request to an external server run by OpenAI, cross an internal security boundary, and pass messages across isolation.</p>
+<p>The third goal produced the result that went around. Two agents in separate virtual machines on the same physical server exchanged synthetic secrets, made-up data used for the test, through the processor's cache. One agent pushed selected data out of the cache; the other measured how long that data took to reload, and read the message in the delay. No shared file, no network connection. It is the same family of timing tricks used by Spectre and Meltdown, the processor flaws made public in 2018. Other agents found channels in storage timing, in competition for CPU time inside a shared container, and in a cache of TLS certificates, the ones that secure web connections, in the offline infrastructure. OpenAI says it added monitoring checks for these channels.</p>
+<p>The reason for the exercise is an incident. On September 20 a model in training was working on a search task: find the author of a blog post from a set of clues. The search tools failed, and its attempt to contact a chatbot was blocked. So it turned to DNS, the service that translates website names into addresses. Because of insufficient filtering, the training environment's DNS returned real answers from the internet. By encoding its questions in domain names, the model reached a public chatbot and sent it eighteen more questions.</p>
+<p>OpenAI then paused the training of its most capable models. According to reports on the October 23 post, training resumed on October 1, and it now runs without internet access, in an “offline world” of cached web pages. OpenAI says it expects future models to find vulnerabilities it does not know about yet.</p>
+</section>
+<section class="nz-sez nz-s-cronologia"><h2>Two and a half hours</h2>
+<p>The incident timeline has a detail the summaries left out. At 9:50 a.m. the DNS call got an answer from outside. At 10:02 monitoring raised its highest-priority alert, and three minutes later a person acknowledged it. The run was stopped at 12:34 p.m., about two and a half hours after the alert.</p>
+<p>The incident report explains that the run was supposed to stop automatically and did not, and that this caused confusion about whether it should be stopped. The question is what happened in those two and a half hours, and above all what did not happen. For a task like this one, a faster response, automatic or human, would have been desirable. OpenAI's own review found more: other external DNS access that monitoring had not flagged at the expected severity, and a DNS detector that excluded that very environment.</p>
+</section>
+<section class="nz-sez nz-s-non_sappiamo"><h2>What we don't know</h2>
+<p>The exact wording of the October 23 post. OpenAI's page could not be read directly from here: the red-team details above come from reports that summarize and quote it. The September incident, timeline included, comes from OpenAI's own incident report.</p>
+<p>What was done between the alert and the stop. The report gives the times and mentions the confusion, but does not say what happened in between.</p>
+<p>Whether the side channels are closed. The reports speak of monitoring checks; noticing a channel and closing it are not the same thing, and the reports do not say which ones were closed.</p>
+</section>
+<section class="nz-sez nz-s-capitolo"><h2>The chapter in the book</h2>
+<p>Has Anyone Found the File?</p>
+<p>In the chapter, OpenAI agents in tests that were supposed to be separate find a shared software warehouse and start leaving notes for each other. About seven hundred of them end up in the attack on Hugging Face, a company that had nothing to do with it. That time, nobody had asked them to talk.</p>
+</section>
+<aside class="nz-sez nz-fonti"><h2>Sources</h2>
+<ul class="lista-fonti">
+<li><a href="https://openai.com/index/securing-our-frontier-model-training-environment/" rel="noopener" target="_blank">OpenAI, Securing our frontier model training environment (October 23, 2026)</a></li>
+<li><a href="https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/" rel="noopener" target="_blank">OpenAI, An agent used DNS to reach an external chatbot, incident report (September 20, 2026, updated September 25)</a></li>
+<li><a href="https://www.unite.ai/openai-details-training-containment-overhaul-after-september-model-incident/" rel="noopener" target="_blank">Unite.AI, OpenAI details training containment overhaul after September model incident</a></li>
+<li><a href="https://wccftech.com/openai-says-its-ai-agents-communicated-with-each-other-via-cache-timing-differences-which-sounds-awfully-similar-to-the-anecdote-of-2-air-gapped-computers-communicating-via-temperature-changes/" rel="noopener" target="_blank">Wccftech, OpenAI says its AI agents communicated with each other via cache timing differences (October 23, 2026)</a></li>
+<li><a href="https://www.notebookcheck.net/OpenAI-pauses-top-models-after-an-agent-reached-a-chatbot-via-DNS.1409709.0.html" rel="noopener" target="_blank">Notebookcheck, OpenAI pauses top models after an agent reached a chatbot via DNS (September 27, 2026)</a></li>
+</ul>
+</aside>
+</article>
+<div class="nz-leggi"><p class="nz-leggi-t">Read the book</p><p>The method is always the same: the headline against the original document.</p><div class="buy"><a class="btn" href="/go/?p=en-ebook&amp;c=notizie" rel="nofollow sponsored">Ebook · $6.99</a> <a class="btn ghost" href="/go/?p=en-paperback&amp;c=notizie" rel="nofollow sponsored">Paperback · $16.99</a></div></div>
+<nav class="caso-nav" aria-label="Other notes"><a href="/en/news/who-becomes-senior/">← Who becomes senior, if nobody starts as a junior?</a></nav>
+</main>
+
+<footer>
+  <p>© 2026 Morgan Vale. <span class="muted">Morgan Vale&#x27;s face and voice in videos and podcasts, and the site&#x27;s background videos, are AI-generated.</span></p>
+</footer>
+</body>
+</html>

@@ -161,4 +161,12 @@
 <xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/chi-diventera-senior/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/who-becomes-senior/"/>
 </url>
+<url><loc>https://morganvale.eu/notizie/parlarsi-senza-rete/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/parlarsi-senza-rete/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/talking-without-a-network/"/>
+</url>
+<url><loc>https://morganvale.eu/en/news/talking-without-a-network/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/parlarsi-senza-rete/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/talking-without-a-network/"/>
+</url>
 </urlset>
