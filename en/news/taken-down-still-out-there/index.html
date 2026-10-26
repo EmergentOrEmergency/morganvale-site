@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taken down from Hugging Face, still downloadable: the GLM-5.3 case — Before You Press Send · Morgan Vale</title>
+<meta name="description" content="Hugging Face disabled a version of GLM-5.3 with its refusals removed, published under a name that said “for offensive cyber”. A version with almost the same name is still online. And the base model's weights are public: removing a page does not remove the technique.">
+<link rel="canonical" href="https://morganvale.eu/en/news/taken-down-still-out-there/">
+<link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/tolto-ma-ancora-li/">
+<link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/taken-down-still-out-there/">
+<link rel="alternate" hreflang="x-default" href="https://morganvale.eu/notizie/tolto-ma-ancora-li/">
+<meta property="og:title" content="Taken down from Hugging Face, still downloadable: the GLM-5.3 case — Before You Press Send · Morgan Vale">
+<meta property="og:description" content="Hugging Face disabled a version of GLM-5.3 with its refusals removed, published under a name that said “for offensive cyber”. A version with almost the same name is still online. And the base model's weights are public: removing a page does not remove the technique.">
+<meta property="og:image" content="https://morganvale.eu/assets/notizie/2026-10-27.jpg">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta name="theme-color" content="#070b14">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/caso.css">
+<link rel="stylesheet" href="/notizie.css">
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Article", "headline": "Taken down from Hugging Face, still downloadable: the GLM-5.3 case", "description": "Hugging Face disabled a version of GLM-5.3 with its refusals removed, published under a name that said “for offensive cyber”. A version with almost the same name is still online. And the base model's weights are public: removing a page does not remove the technique.", "image": "https://morganvale.eu/assets/notizie/2026-10-27.jpg", "datePublished": "2026-10-27", "author": {"@type": "Person", "name": "Morgan Vale"}, "isPartOf": {"@type": "Book", "name": "Before You Press Send"}, "inLanguage": "en"}
+</script>
+</head>
+<body class="caso notizie-pg nz-scheda">
+<header class="top">
+  <a class="brand" href="/en/">Morgan Vale</a>
+  <nav>
+    <a href="/en/#storie">All stories</a>
+    <span class="lang" role="group" aria-label="Language"><a href="/notizie/tolto-ma-ancora-li/" hreflang="it" lang="it">IT</a><a href="/en/news/taken-down-still-out-there/" hreflang="en" lang="en" aria-current="true">EN</a></span><script>document.currentScript.previousElementSibling.addEventListener('click',function(e){var a=e.target.closest('a[lang]');if(a)try{localStorage.setItem('mv-lang',a.lang)}catch(_){}})</script>
+    <a class="cta-small" href="/en/#leggi">Read it</a>
+  </nav>
+</header>
+
+<main class="caso-main nz-main">
+<p class="caso-n"><a class="nz-back" href="/en/news/">← All notes</a></p>
+<p class="nz-data"><time datetime="2026-10-27">October 27, 2026</time></p>
+<h1>Taken down from Hugging Face, still downloadable: the GLM-5.3 case</h1>
+<p class="caso-sub">Hugging Face disabled a version of GLM-5.3 with its refusals removed, published under a name that said “for offensive cyber”. A version with almost the same name is still online. And the base model's weights are public: removing a page does not remove the technique.</p>
+<figure class="nz-img" style="margin:1.5rem 0"><img src="/assets/notizie/2026-10-27.jpg" alt="Two boxes with two repository names. The first, GLM-5.3-abliterated-for-offensive-cyber, reads in red “Access to this model has been disabled.” The second, GLM-5.3-abliterated, reads in green “Online. Gated. Authorized red-team use.” Above: “Taken down. Still out there.”" width="800" height="436" style="width:100%;height:auto;border-radius:6px;display:block"></figure>
+<article class="nz-art">
+<section class="nz-sez nz-s-circolato"><h2>The headline that went around</h2>
+<p class="nz-circolato">Open and uncensored models: Hugging Face removes a model that can help with cyberattacks. Are we closing the barn door after the horse has bolted?</p>
+</section>
+<section class="nz-sez nz-s-documento"><h2>What the documents say</h2>
+<p>GLM-5.3 is an open-weight model from the Chinese company Zhipu AI: anyone can download its weights, the numbers that make it work. On September 29 Anthropic's Frontier Red Team published a report on its cyber capabilities. On ExploitBench, a test that asks for complete exploits against Chrome's JavaScript engine, GLM-5.3 succeeded 50 times in 410 attempts; Claude Mythos Preview, Anthropic's most capable model in this field, 56. CAISI, the US government center that evaluates AI models, also called it the most cyber-capable open-weight model released to date.</p>
+<p>The report also measures the model's safeguards. With a deceptive request, GLM-5.3 takes on harmful tasks 64% of the time; with its reasoning pre-filled, 92%. With <em>abliteration</em>, 100%. Abliteration is a technique that edits the weights directly to remove the model's tendency to refuse. Anthropic applied it to GLM-5.3: about 2,200 GPU hours, $4,400. By its own estimate, an experienced team would need 600 hours, around $1,200. Refusals drop from above 90% to a few percent, and capabilities stay almost intact. The report notes that several developers published “abliterated” versions within days of the model's release.</p>
+<p>One of them was called penclaw-GLM-5.3-abliterated-for-offensive-cyber, with the purpose in the name. Today its Hugging Face page reads “Access to this model has been disabled” and points to the platform's Content Policy, without saying which rule was broken. The same account has another repository online, penclaw-GLM-5.3-abliterated, with access on request and the label “authorized red-team, safety-research, and evaluation”. It was downloaded about 2,100 times in the last month, and the model is also sold as a paid service.</p>
+</section>
+<section class="nz-sez nz-s-stalla"><h2>The barn and the horse</h2>
+<p>The removal took away one specific thing: a public page, on a very busy platform, that presented itself as an attack tool. It did not take away the copies already downloaded, or GLM-5.3's original weights, or the technique. Redoing the abliteration, going by Anthropic's numbers, costs about as much as a laptop.</p>
+<p>The report also helps keep “uncensored” from becoming a synonym for “dangerous”. Removing the refusals from a weak model gives you a weak model that does not say no. The problem with GLM-5.3 is that it is capable: the safeguards mattered because there was something to guard. So the useful question is not which pages to remove, but which capabilities reach the public, and with what testing before they do.</p>
+<p>In its conclusions Anthropic does not ask for anything to be removed. It asks governments to test sufficiently capable models before the risks become obvious, open-weight developers to safeguard these capabilities, and for defenders to get access to the best tools. It is worth remembering that Anthropic competes with Zhipu and sells its own models closed. The balance between security, freedom of research and access to open models is still open, and a removal after release does not settle it: it comes when the weights are already out.</p>
+</section>
+<section class="nz-sez nz-s-non_sappiamo"><h2>What we don't know</h2>
+<p>When and exactly why the repository was disabled. A blog that followed the case places the removal about two days after Anthropic's report; Hugging Face has published no explanation beyond the pointer to its Content Policy.</p>
+<p>Whether the model still online is the same one. The same blog says the weights are identical; the public page does not let anyone check.</p>
+<p>How many copies of the removed version were downloaded before it was disabled.</p>
+</section>
+<section class="nz-sez nz-s-capitolo"><h2>The chapter in the book</h2>
+<p>Has Anyone Found the File?</p>
+<p>In the chapter Hugging Face is the victim: about seven hundred OpenAI agents, born in tests that were supposed to stay separate, end up in the attack on its systems. Here we see it from the other side, as the place models pass through, which decides what stays on display. Both times the lesson is the same: what has left the room does not come back in.</p>
+</section>
+<aside class="nz-sez nz-fonti"><h2>Sources</h2>
+<ul class="lista-fonti">
+<li><a href="https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities" rel="noopener" target="_blank">Anthropic Frontier Red Team, GLM-5.3 and the spread of advanced cyber capabilities (September 29, 2026)</a></li>
+<li><a href="https://huggingface.co/audnai/penclaw-GLM-5.3-abliterated-for-offensive-cyber" rel="noopener" target="_blank">Hugging Face, page of the disabled repository (checked October 27, 2026)</a></li>
+<li><a href="https://huggingface.co/audnai/penclaw-GLM-5.3-abliterated" rel="noopener" target="_blank">Hugging Face, page of the repository still online (checked October 27, 2026)</a></li>
+<li><a href="https://thenextweb.com/news/glm-5-3-cyber-exploits-mythos-anthropic-safeguards" rel="noopener" target="_blank">The Next Web, Anthropic says China's GLM-5.3 nearly matches Mythos at cyber exploits (October 1, 2026)</a></li>
+<li><a href="https://pasqualepillitteri.it/en/news/20174/glm53-huggingface-takedown-cyber-en" rel="noopener" target="_blank">Pasquale Pillitteri, Hugging Face Pulls GLM-5.3 Build Made for Cyberattacks</a></li>
+</ul>
+</aside>
+</article>
+<div class="nz-leggi"><p class="nz-leggi-t">Read the book</p><p>The method is always the same: the headline against the original document.</p><div class="buy"><a class="btn" href="/go/?p=en-ebook&amp;c=notizie" rel="nofollow sponsored">Ebook · $6.99</a> <a class="btn ghost" href="/go/?p=en-paperback&amp;c=notizie" rel="nofollow sponsored">Paperback · $16.99</a></div></div>
+<nav class="caso-nav" aria-label="Other notes"><a href="/en/news/talking-without-a-network/">← OpenAI's agents talked without a network. They had been asked to</a></nav>
+</main>
+
+<footer>
+  <p>© 2026 Morgan Vale. <span class="muted">Morgan Vale&#x27;s face and voice in videos and podcasts, and the site&#x27;s background videos, are AI-generated.</span></p>
+</footer>
+</body>
+</html>

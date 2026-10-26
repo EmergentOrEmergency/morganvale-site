@@ -169,4 +169,12 @@
 <xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/parlarsi-senza-rete/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/talking-without-a-network/"/>
 </url>
+<url><loc>https://morganvale.eu/notizie/tolto-ma-ancora-li/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/tolto-ma-ancora-li/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/taken-down-still-out-there/"/>
+</url>
+<url><loc>https://morganvale.eu/en/news/taken-down-still-out-there/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/tolto-ma-ancora-li/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/taken-down-still-out-there/"/>
+</url>
 </urlset>
