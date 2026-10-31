@@ -177,4 +177,12 @@
 <xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/tolto-ma-ancora-li/"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/taken-down-still-out-there/"/>
 </url>
+<url><loc>https://morganvale.eu/notizie/dati-innocui-modello-ostile/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/dati-innocui-modello-ostile/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/harmless-data-hostile-model/"/>
+</url>
+<url><loc>https://morganvale.eu/en/news/harmless-data-hostile-model/</loc>
+<xhtml:link rel="alternate" hreflang="it" href="https://morganvale.eu/notizie/dati-innocui-modello-ostile/"/>
+<xhtml:link rel="alternate" hreflang="en" href="https://morganvale.eu/en/news/harmless-data-hostile-model/"/>
+</url>
 </urlset>
